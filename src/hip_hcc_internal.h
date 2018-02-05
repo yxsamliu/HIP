@@ -24,6 +24,7 @@ THE SOFTWARE.
 #define HIP_SRC_HIP_HCC_INTERNAL_H
 
 #include <hc.hpp>
+#include <hc_am.hpp>
 #include <hsa/hsa.h>
 #include <unordered_map>
 
