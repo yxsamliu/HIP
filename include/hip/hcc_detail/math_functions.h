@@ -22,6 +22,7 @@ THE SOFTWARE.
 
 #pragma once
 
+#include "hip_fp16_math_fwd.h"
 #include "math_fwd.h"
 
 #include <hip/hcc_detail/host_defines.h>
@@ -30,6 +31,7 @@ THE SOFTWARE.
 #include <limits.h>
 #include <limits>
 #include <stdint.h>
+#include <type_traits>
 
 #pragma push_macro("__DEVICE__")
 #pragma push_macro("__RETURN_TYPE")
@@ -1158,6 +1160,11 @@ long long llabs(long long x)
 #endif
 // END INTEGER
 
+    __DEVICE__
+    inline _Float16 fma(_Float16 x, _Float16 y, _Float16 z) {
+      return __ocml_fma_f16(x, y, z);
+    }
+
 #pragma push_macro("__DEF_FLOAT_FUN")
 #pragma push_macro("__DEF_FLOAT_FUN2")
 #pragma push_macro("__DEF_FLOAT_FUN2I")
@@ -1170,6 +1177,36 @@ struct __hip_enable_if {};
 
 template <class __T> struct __hip_enable_if<true, __T> {
   typedef __T type;
+};
+
+// Type function to get the type with larger max value.
+template <class __T1, class __T2> struct __hip_promote {
+  static constexpr bool T1IsGreater = std::numeric_limits<__T1>::max() >
+                                      std::numeric_limits<__T2>::max();
+  typedef typename std::conditional<T1IsGreater, __T1, __T2>::type type;
+};
+
+// Type function to promote a type to float or double.
+template <class __T> struct __hip_fp_promote1 {
+  static constexpr bool GreaterThanFloat = std::numeric_limits<__T>::max() >
+                                           std::numeric_limits<float>::max();
+  typedef typename std::conditional<
+      GreaterThanFloat, double, float>::type
+      type;
+};
+
+// Type function to promote two types to float or double.
+template <class __T1, class __T2> struct __hip_fp_promote2 {
+  typedef typename __hip_fp_promote1<__T1>::type __promotedT1;
+  typedef typename __hip_fp_promote1<__T2>::type __promotedT2;
+  typedef typename __hip_promote<__promotedT1, __promotedT2>::type type;
+};
+
+// Type function to promote three types to float or double.
+template <class __T1, class __T2, class __T3> struct __hip_fp_promote3 {
+  typedef
+      typename __hip_fp_promote2<typename __hip_fp_promote2<__T1, __T2>::type,
+                                 __T3>::type type;
 };
 
 // __HIP_OVERLOAD1 is used to resolve function calls with integer argument to
@@ -1195,6 +1232,21 @@ template <class __T> struct __hip_enable_if<true, __T> {
       __retty>::type                                                           \
   __fn(__T1 __x, __T2 __y) {                                                   \
     return __fn((double)__x, (double)__y);                                     \
+  }
+
+// __HIP_OVERLOAD3 is used to resolve function calls with mixed float/double
+// or integer argument to avoid compilation error due to ambiguity. e.g.
+// fma(5.0f, 6.0, 7) is resolved with fma(double, double, double).
+#define __HIP_OVERLOAD3(__retty, __fn)                                         \
+  template <typename __T1, typename __T2, typename __T3>                       \
+  __DEVICE__ typename __hip_enable_if<                                         \
+      std::numeric_limits<__T1>::is_specialized &&                             \
+          std::numeric_limits<__T2>::is_specialized &&                         \
+          std::numeric_limits<__T3>::is_specialized,                           \
+      __retty>::type                                                           \
+  __fn(__T1 __x, __T2 __y, __T3 __z) {                                         \
+    typedef typename __hip_fp_promote3<__T1, __T2, __T3>::type arg_type;       \
+    return __fn((arg_type)__x, (arg_type)__y, (arg_type)__z);                  \
   }
 
 // Define cmath functions with float argument and returns float.
@@ -1227,6 +1279,12 @@ float func(float x, float y) \
 } \
 __HIP_OVERLOAD2(retty, func)
 
+// define cmath functions with three float arguments.
+#define __DEF_FUN3(retty, func)                                                \
+  __DEVICE__                                                                   \
+  inline float func(float x, float y, float z) { return func##f(x, y, z); }    \
+  __HIP_OVERLOAD3(retty, func)
+
 __DEF_FUN1(double, acos)
 __DEF_FUN1(double, acosh)
 __DEF_FUN1(double, asin)
@@ -1247,6 +1305,7 @@ __DEF_FUN1(double, expm1)
 __DEF_FUN1(double, fabs)
 __DEF_FUN2(double, fdim);
 __DEF_FUN1(double, floor)
+__DEF_FUN3(double, fma)
 __DEF_FUN2(double, fmax);
 __DEF_FUN2(double, fmin);
 __DEF_FUN2(double, fmod);
