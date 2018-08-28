@@ -611,16 +611,32 @@ __device__ static inline float __ull2float_rz(unsigned long long int x) { return
 
 #ifdef __HCC_OR_HIP_CLANG__
 
+// Clock functions
+__device__ long long int __clock64();
+__device__ long long int __clock();
+__device__ long long int clock64();
+__device__ long long int clock();
+// hip.amdgcn.bc - named sync
+__device__ void __named_sync(int a, int b);
+
 #ifdef __HIP_DEVICE_COMPILE__
 
 // Clock functions
 __device__
-inline
+inline  __attribute((always_inline))
 long long int __clock64() { return (long long int) __builtin_amdgcn_s_memrealtime(); }
 
 __device__
-inline
+inline __attribute((always_inline))
 long long int  __clock() { return (long long int) __builtin_amdgcn_s_memrealtime(); }
+
+__device__
+inline  __attribute__((always_inline))
+long long int clock64() { return __clock64(); }
+
+__device__
+inline __attribute__((always_inline))
+long long int  clock() { return __clock(); }
 
 // hip.amdgcn.bc - named sync
 __device__
