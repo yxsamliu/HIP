@@ -62,7 +62,7 @@ message(STATUS "HIP Platform: " ${HIP_PLATFORM})
 # Either hcc or clang; default is hcc
 if(NOT DEFINED HIP_COMPILER)
     if(NOT DEFINED ENV{HIP_COMPILER})
-        set(HIP_COMPILER "hcc" CACHE STRING "HIP Compiler")
+        set(HIP_COMPILER "clang" CACHE STRING "HIP Compiler")
     else()
         set(HIP_COMPILER $ENV{HIP_COMPILER} CACHE STRING "HIP Compiler")
     endif()
