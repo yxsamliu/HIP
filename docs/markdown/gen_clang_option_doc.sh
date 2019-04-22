@@ -12,7 +12,7 @@ echo
 echo "|Option|Support|Description|"
 echo "|-------|------|-------|"
 
-$clang --help | sed '5d'|  while read a b; do
+$clang --help | sed '1,5d'|  while read a b; do
   if [[ "$a" != "-"* ]]; then
     desc="$a $b"
   elif [[ "$b" = *'>'* ]]; then

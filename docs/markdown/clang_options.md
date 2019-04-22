@@ -3,10 +3,6 @@
 
 |Option|Support|Description|
 |-------|------|-------|
-|``||`OVERVIEW: clang LLVM compiler`|
-|``||` `|
-|``||`USAGE: clang-8 [options] file...`|
-|``||` `|
 |`-###`||`Print (but do not run) the commands to run for this compilation`|
 |`--analyzer-output <value>`||`Static analyzer report output format (html|plist|plist-multi-file|plist-html|text).`|
 |`--analyze`||`Run the static analyzer`|
