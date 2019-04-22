@@ -14,15 +14,19 @@ echo "|-------|------|-------|"
 
 $clang --help | sed '5d'|  while read a b; do
   if [[ "$a" != "-"* ]]; then
-    continue
+    desc="$a $b"
   elif [[ "$b" = *'>'* ]]; then
-    res=$(echo $a $b| sed 's:\(^-[^ ]*[= ]*<[^<>]*>\) *\(.*\):|`\1`||`\2`|:')
-    if [[ "$res" == "$a $b" ]]; then
-      echo '|`'$a'`||`'$b'`|'
-    else
-      echo $res
+    opt=$(echo $a $b| sed 's:\(^-[^ ]*[= ]*<[^<>]*>\) *\(.*\):\1:')
+    desc=$(echo $a $b| sed 's:\(^-[^ ]*[= ]*<[^<>]*>\) *\(.*\):\2:')
+    if [[ "$opt" == "$desc" ]]; then
+      opt="$a"
+      desc="$b"
     fi
   else
-    echo '|`'$a'`||`'$b'`|'
+    opt="$a"
+    desc="$b"
+  fi
+  if [[ "$desc" != "" ]]; then
+    echo '|`'$opt'`||`'$desc'`|'
   fi
 done

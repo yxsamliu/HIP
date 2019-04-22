@@ -3,62 +3,66 @@
 
 |Option|Support|Description|
 |-------|------|-------|
+|``||`OVERVIEW: clang LLVM compiler`|
+|``||` `|
+|``||`USAGE: clang-8 [options] file...`|
+|``||` `|
 |`-###`||`Print (but do not run) the commands to run for this compilation`|
-|`--analyzer-output <value>`||``|
+|`--analyzer-output <value>`||`Static analyzer report output format (html|plist|plist-multi-file|plist-html|text).`|
 |`--analyze`||`Run the static analyzer`|
-|`-arcmt-migrate-emit-errors`||``|
-|`-arcmt-migrate-report-output <value>`||``|
+|`-arcmt-migrate-emit-errors`||`Emit ARC errors even if the migrator can fix them`|
+|`-arcmt-migrate-report-output <value>`||`Output path for the plist report`|
 |`-B <dir>`||`Add <dir> to search path for binaries and object files used implicitly`|
 |`-CC`||`Include comments from within macros in preprocessed output`|
 |`-cfguard`||`Emit tables required for Windows Control Flow Guard.`|
 |`-cl-denorms-are-zero`||`OpenCL only. Allow denormals to be flushed to zero.`|
 |`-cl-fast-relaxed-math`||`OpenCL only. Sets -cl-finite-math-only and -cl-unsafe-math-optimizations, and defines __FAST_RELAXED_MATH__.`|
 |`-cl-finite-math-only`||`OpenCL only. Allow floating-point optimizations that assume arguments and results are not NaNs or +-Inf.`|
-|`-cl-fp32-correctly-rounded-divide-sqrt`||``|
+|`-cl-fp32-correctly-rounded-divide-sqrt`||`OpenCL only. Specify that single precision floating-point divide and sqrt used in the program source are correctly rounded.`|
 |`-cl-kernel-arg-info`||`OpenCL only. Generate kernel argument metadata.`|
 |`-cl-mad-enable`||`OpenCL only. Allow use of less precise MAD computations in the generated binary.`|
 |`-cl-no-signed-zeros`||`OpenCL only. Allow use of less precise no signed zeros computations in the generated binary.`|
 |`-cl-opt-disable`||`OpenCL only. This option disables all optimizations. By default optimizations are enabled.`|
-|`-cl-single-precision-constant`||``|
+|`-cl-single-precision-constant`||`OpenCL only. Treat double precision floating-point constant as single precision constant.`|
 |`-cl-std=<value>`||`OpenCL language standard to compile for.`|
 |`-cl-strict-aliasing`||`OpenCL only. This option is added for compatibility with OpenCL 1.0.`|
-|`-cl-uniform-work-group-size`||``|
-|`-cl-unsafe-math-optimizations`||``|
+|`-cl-uniform-work-group-size`||`OpenCL only. Defines that the global work-size be a multiple of the work-group size specified to clEnqueueNDRangeKernel`|
+|`-cl-unsafe-math-optimizations`||`OpenCL only. Allow unsafe floating-point optimizations. Also implies -cl-no-signed-zeros and -cl-mad-enable.`|
 |`--config <value>`||`Specifies configuration file`|
-|`--cuda-compile-host-device`||``|
+|`--cuda-compile-host-device`||`Compile CUDA code for both host and device (default). Has no effect on non-CUDA compilations.`|
 |`--cuda-device-only`||`Compile CUDA code for device only`|
 |`--cuda-gpu-arch=<value>`||`CUDA GPU architecture (e.g. sm_35). May be specified more than once.`|
 |`--cuda-host-only`||`Compile CUDA code for host only. Has no effect on non-CUDA compilations.`|
-|`--cuda-include-ptx=<value>`||``|
-|`--cuda-noopt-device-debug`||``|
+|`--cuda-include-ptx=<value>`||`Include PTX for the following GPU architecture (e.g. sm_35) or 'all'. May be specified more than once.`|
+|`--cuda-noopt-device-debug`||`Enable device-side debug info generation. Disables ptxas optimizations.`|
 |`--cuda-path-ignore-env`||`Ignore environment variables to detect CUDA installation`|
 |`--cuda-path=<value>`||`CUDA installation path`|
-|`-cxx-isystem <directory>`||``|
+|`-cxx-isystem <directory>`||`Add directory to the C++ SYSTEM include search path`|
 |`-C`||`Include comments in preprocessed output`|
 |`-c`||`Only run preprocess, compile, and assemble steps`|
 |`-dD`||`Print macro definitions in -E mode in addition to normal output`|
 |`-dependency-dot <value>`||`Filename to write DOT-formatted header dependencies to`|
-|`-dependency-file <value>`||``|
+|`-dependency-file <value>`||`Filename (or -) to write dependency output to`|
 |`-dI`||`Print include directives in -E mode in addition to normal output`|
 |`-dM`||`Print macro definitions in -E mode instead of normal output`|
 |`-D <macro>`||`=<value> Define <macro> to <value> (or 1 if <value> omitted)`|
 |`-emit-ast`||`Emit Clang AST files for source inputs`|
 |`-emit-llvm`||`Use the LLVM representation for assembler and object files`|
-|`-enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang<value>`||``|
+|`-enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang<value>`||`Trivial automatic variable initialization to zero is only here for benchmarks, it'll eventually be removed, and I'm OK with that because I'm only using it to benchmark`|
 |`-E`||`Only run the preprocessor`|
 |`-faddrsig`||`Emit an address-significance table`|
 |`-faligned-allocation`||`Enable C++17 aligned allocation functions`|
-|`-fallow-editor-placeholders`||``|
+|`-fallow-editor-placeholders`||`Treat editor placeholders as valid source code`|
 |`-fansi-escape-codes`||`Use ANSI escape codes for diagnostics`|
 |`-fapple-kext`||`Use Apple's kernel extensions ABI`|
 |`-fapple-pragma-pack`||`Enable Apple gcc-compatible #pragma pack handling`|
 |`-fapplication-extension`||`Restrict code to those available for App Extensions`|
 |`-fblocks`||`Enable the 'blocks' language feature`|
 |`-fborland-extensions`||`Accept non-standard constructs supported by the Borland compiler`|
-|`-fbuild-session-file=<file>`||``|
-|`-fbuild-session-timestamp=<time since Epoch in seconds>`||``|
+|`-fbuild-session-file=<file>`||`Use the last modification time of <file> as the build session timestamp`|
+|`-fbuild-session-timestamp=<time since Epoch in seconds>`||`Time when the current build session started`|
 |`-fbuiltin-module-map`||`Load the clang builtins module map file.`|
-|`-fc++-static-destructors`||``|
+|`-fc++-static-destructors`||`Enable C++ static destructor registration (the default)`|
 |`-fcall-saved-x10`||`Make the x10 register call-saved (AArch64 only)`|
 |`-fcall-saved-x11`||`Make the x11 register call-saved (AArch64 only)`|
 |`-fcall-saved-x12`||`Make the x12 register call-saved (AArch64 only)`|
@@ -71,50 +75,50 @@
 |`-fcf-protection=<value>`||`Instrument control-flow architecture protection. Options: return, branch, full, none.`|
 |`-fcf-protection`||`Enable cf-protection in 'full' mode`|
 |`-fchar8_t`||`Enable C++ builtin type char8_t`|
-|`-fclang-abi-compat=<version>`||``|
+|`-fclang-abi-compat=<version>`||`Attempt to match the ABI of Clang <version>`|
 |`-fcolor-diagnostics`||`Use colors in diagnostics`|
-|`-fcomment-block-commands=<arg>`||``|
-|`-fcomplete-member-pointers`||``|
+|`-fcomment-block-commands=<arg>`||`Treat each comma separated argument in <arg> as a documentation comment block command`|
+|`-fcomplete-member-pointers`||`Require member pointer base types to be complete if they would be significant under the Microsoft ABI`|
 |`-fcoroutines-ts`||`Enable support for the C++ Coroutines TS`|
 |`-fcoverage-mapping`||`Generate coverage mapping to enable code coverage analysis`|
-|`-fcs-profile-generate=<directory>`||``|
+|`-fcs-profile-generate=<directory>`||`Generate instrumented code to collect context sensitive execution counts into <directory>/default.profraw (overridden by LLVM_PROFILE_FILE env var)`|
 |`-fcs-profile-generate`||`Generate instrumented code to collect context sensitive execution counts into default.profraw (overridden by LLVM_PROFILE_FILE env var)`|
-|`-fcuda-approx-transcendentals`||``|
-|`-fcuda-flush-denormals-to-zero`||``|
+|`-fcuda-approx-transcendentals`||`Use approximate transcendental functions`|
+|`-fcuda-flush-denormals-to-zero`||`Flush denormal floating point values to zero in CUDA device mode.`|
 |`-fcuda-short-ptr`||`Use 32-bit pointers for accessing const/local/shared address spaces.`|
 |`-fcxx-exceptions`||`Enable C++ exceptions`|
 |`-fdata-sections`||`Place each data in its own section (ELF Only)`|
-|`-fdebug-info-for-profiling`||``|
+|`-fdebug-info-for-profiling`||`Emit extra debug info to make sample profile more accurate.`|
 |`-fdebug-macro`||`Emit macro debug information`|
-|`-fdebug-prefix-map=<value>`||``|
-|`-fdebug-ranges-base-address`||``|
+|`-fdebug-prefix-map=<value>`||`remap file source paths in debug info`|
+|`-fdebug-ranges-base-address`||`Use DWARF base address selection entries in debug_ranges`|
 |`-fdebug-types-section`||`Place debug types in their own section (ELF Only)`|
 |`-fdeclspec`||`Allow __declspec as a keyword`|
-|`-fdelayed-template-parsing`||``|
-|`-fdelete-null-pointer-checks`||``|
-|`-fdiagnostics-absolute-paths`||``|
-|`-fdiagnostics-hotness-threshold=<number>`||``|
-|`-fdiagnostics-parseable-fixits`||``|
-|`-fdiagnostics-print-source-range-info`||``|
-|`-fdiagnostics-show-hotness`||``|
-|`-fdiagnostics-show-note-include-stack`||``|
-|`-fdiagnostics-show-option`||``|
-|`-fdiagnostics-show-template-tree`||``|
+|`-fdelayed-template-parsing`||`Parse templated function definitions at the end of the translation unit`|
+|`-fdelete-null-pointer-checks`||`Treat usage of null pointers as undefined behavior.`|
+|`-fdiagnostics-absolute-paths`||`Print absolute paths in diagnostics`|
+|`-fdiagnostics-hotness-threshold=<number>`||`Prevent optimization remarks from being output if they do not have at least this profile count`|
+|`-fdiagnostics-parseable-fixits`||`Print fix-its in machine parseable form`|
+|`-fdiagnostics-print-source-range-info`||`Print source range spans in numeric form`|
+|`-fdiagnostics-show-hotness`||`Enable profile hotness information in diagnostic line`|
+|`-fdiagnostics-show-note-include-stack`||`Display include stacks for diagnostic notes`|
+|`-fdiagnostics-show-option`||`Print option name with mappable diagnostics`|
+|`-fdiagnostics-show-template-tree`||`Print a template comparison tree for differing templates`|
 |`-fdigraphs`||`Enable alternative token representations '<:', ':>', '<%', '%>', '%:', '%:%:' (default)`|
 |`-fdiscard-value-names`||`Discard value names in LLVM IR`|
-|`-fdollars-in-identifiers`||``|
-|`-fdouble-square-bracket-attributes`||``|
+|`-fdollars-in-identifiers`||`Allow '$' in identifiers`|
+|`-fdouble-square-bracket-attributes`||`Enable '[[]]' attributes in all C and C++ language modes`|
 |`-fdwarf-exceptions`||`Use DWARF style exceptions`|
 |`-fembed-bitcode-marker`||`Embed placeholder LLVM IR data as a marker`|
-|`-fembed-bitcode=<option>`||``|
+|`-fembed-bitcode=<option>`||`Embed LLVM bitcode (option: off, all, bitcode, marker)`|
 |`-fembed-bitcode`||`Embed LLVM IR bitcode as data`|
 |`-femit-all-decls`||`Emit all declarations, even if unused`|
 |`-femulated-tls`||`Use emutls functions to access thread_local variables`|
 |`-fexceptions`||`Enable support for exception handling`|
 |`-fexperimental-isel`||`Enables the experimental global instruction selector`|
-|`-fexperimental-new-pass-manager`||``|
+|`-fexperimental-new-pass-manager`||`Enables an experimental new pass manager in LLVM.`|
 |`-ffast-math`||`Allow aggressive, lossy floating-point optimizations`|
-|`-ffine-grained-bitfield-accesses`||``|
+|`-ffine-grained-bitfield-accesses`||`Use separate accesses for consecutive bitfield runs with legal widths and alignments.`|
 |`-ffixed-point`||`Enable fixed point types`|
 |`-ffixed-r19`||`Reserve register r19 (Hexagon only)`|
 |`-ffixed-r9`||`Reserve the r9 register (ARM only)`|
@@ -154,8 +158,8 @@
 |`-fimplicit-module-maps`||`Implicitly search the file system for module map files.`|
 |`-finline-functions`||`Inline suitable functions`|
 |`-finline-hint-functions`||`Inline functions which are (explicitly or implicitly) marked inline`|
-|`-finstrument-function-entry-bare`||``|
-|`-finstrument-functions-after-inlining`||``|
+|`-finstrument-function-entry-bare`||`Instrument function entry only, after inlining, without arguments to the instrumentation call`|
+|`-finstrument-functions-after-inlining`||`Like -finstrument-functions, but insert the calls after inlining`|
 |`-finstrument-functions`||`Generate calls to instrument function entry and exit`|
 |`-fintegrated-as`||`Enable the integrated assembler`|
 |`-fkeep-static-consts`||`Keep static const variables even if unused`|
@@ -163,101 +167,101 @@
 |`-flto=<value>`||`Set LTO mode to either 'full' or 'thin'`|
 |`-flto`||`Enable LTO in 'full' mode`|
 |`-fmath-errno`||`Require math functions to indicate errors by setting errno`|
-|`-fmax-type-align=<value>`||``|
+|`-fmax-type-align=<value>`||`Specify the maximum alignment to enforce on pointers lacking an explicit alignment`|
 |`-fmerge-all-constants`||`Allow merging of constants`|
-|`-fmodule-file=[<name>=]<file>`||``|
-|`-fmodule-map-file=<file>`||``|
+|`-fmodule-file=[<name>=]<file>`||`Specify the mapping of module name to precompiled module file, or load a module file if name is omitted.`|
+|`-fmodule-map-file=<file>`||`Load this module map file`|
 |`-fmodule-name=<name>`||`Specify the name of the module to build`|
-|`-fmodules-cache-path=<directory>`||``|
+|`-fmodules-cache-path=<directory>`||`Specify the module cache path`|
 |`-fmodules-decluse`||`Require declaration of modules used within a module`|
-|`-fmodules-disable-diagnostic-validation`||``|
-|`-fmodules-ignore-macro=<value>`||``|
-|`-fmodules-prune-after=<seconds>`||``|
-|`-fmodules-prune-interval=<seconds>`||``|
+|`-fmodules-disable-diagnostic-validation`||`Disable validation of the diagnostic options when loading the module`|
+|`-fmodules-ignore-macro=<value>`||`Ignore the definition of the given macro when building and loading modules`|
+|`-fmodules-prune-after=<seconds>`||`Specify the interval (in seconds) after which a module file will be considered unused`|
+|`-fmodules-prune-interval=<seconds>`||`Specify the interval (in seconds) between attempts to prune the module cache`|
 |`-fmodules-search-all`||`Search even non-imported modules to resolve references`|
-|`-fmodules-strict-decluse`||``|
+|`-fmodules-strict-decluse`||`Like -fmodules-decluse but requires all headers to be in modules`|
 |`-fmodules-ts`||`Enable support for the C++ Modules TS`|
-|`-fmodules-user-build-path <directory>`||``|
-|`-fmodules-validate-once-per-build-session`||``|
-|`-fmodules-validate-system-headers`||``|
+|`-fmodules-user-build-path <directory>`||`Specify the module user build path`|
+|`-fmodules-validate-once-per-build-session`||`Don't verify input files for the modules if the module has been successfully validated or loaded during this build session`|
+|`-fmodules-validate-system-headers`||`Validate the system headers that a module depends on when loading the module`|
 |`-fmodules`||`Enable the 'modules' language feature`|
-|`-fms-compatibility-version=<value>`||``|
+|`-fms-compatibility-version=<value>`||`Dot-separated value representing the Microsoft compiler version number to report in _MSC_VER (0 = don't define it (default))`|
 |`-fms-compatibility`||`Enable full Microsoft Visual C++ compatibility`|
 |`-fms-extensions`||`Accept some non-standard constructs supported by the Microsoft compiler`|
 |`-fmsc-version=<value>`||`Microsoft compiler version number to report in _MSC_VER (0 = don't define it (default))`|
 |`-fnew-alignment=<align>`||`Specifies the largest alignment guaranteed by '::operator new(size_t)'`|
 |`-fno-access-control`||`Disable C++ access control`|
 |`-fno-addrsig`||`Don't emit an address-significance table`|
-|`-fno-assume-sane-operator-new`||``|
+|`-fno-assume-sane-operator-new`||`Don't assume that C++'s global operator new can't alias any pointer`|
 |`-fno-autolink`||`Disable generation of linker directives for automatic library linking`|
 |`-fno-builtin-<value>`||`Disable implicit builtin knowledge of a specific function`|
 |`-fno-builtin`||`Disable implicit builtin knowledge of functions`|
-|`-fno-c++-static-destructors`||``|
+|`-fno-c++-static-destructors`||`Disable C++ static destructor registration`|
 |`-fno-char8_t`||`Disable C++ builtin type char8_t`|
 |`-fno-common`||`Compile common globals like normal definitions`|
-|`-fno-complete-member-pointers`||``|
+|`-fno-complete-member-pointers`||`Do not require member pointer base types to be complete if they would be significant under the Microsoft ABI`|
 |`-fno-constant-cfstrings`||`Disable creation of CodeFoundation-type constant strings`|
 |`-fno-coverage-mapping`||`Disable code coverage analysis`|
 |`-fno-crash-diagnostics`||`Disable auto-generation of preprocessed source files and a script for reproduction during a clang crash`|
-|`-fno-debug-info-for-profiling`||``|
+|`-fno-debug-info-for-profiling`||`Do not emit extra debug info for sample profiler.`|
 |`-fno-debug-macro`||`Do not emit macro debug information`|
 |`-fno-declspec`||`Disallow __declspec as a keyword`|
-|`-fno-delayed-template-parsing`||``|
-|`-fno-delete-null-pointer-checks`||``|
-|`-fno-diagnostics-fixit-info`||``|
+|`-fno-delayed-template-parsing`||`Disable delayed template parsing`|
+|`-fno-delete-null-pointer-checks`||`Do not treat usage of null pointers as undefined behavior.`|
+|`-fno-diagnostics-fixit-info`||`Do not include fixit information in diagnostics`|
 |`-fno-digraphs`||`Disallow alternative token representations '<:', ':>', '<%', '%>', '%:', '%:%:'`|
-|`-fno-discard-value-names`||``|
-|`-fno-dollars-in-identifiers`||``|
-|`-fno-double-square-bracket-attributes`||``|
+|`-fno-discard-value-names`||`Do not discard value names in LLVM IR`|
+|`-fno-dollars-in-identifiers`||`Disallow '$' in identifiers`|
+|`-fno-double-square-bracket-attributes`||`Disable '[[]]' attributes in all C and C++ language modes`|
 |`-fno-elide-constructors`||`Disable C++ copy constructor elision`|
 |`-fno-elide-type`||`Do not elide types when printing diagnostics`|
 |`-fno-experimental-isel`||`Disables the experimental global instruction selector`|
-|`-fno-experimental-new-pass-manager`||``|
-|`-fno-fine-grained-bitfield-accesses`||``|
+|`-fno-experimental-new-pass-manager`||`Disables an experimental new pass manager in LLVM.`|
+|`-fno-fine-grained-bitfield-accesses`||`Use large-integer access for consecutive bitfield runs.`|
 |`-fno-fixed-point`||`Disable fixed point types`|
-|`-fno-force-enable-int128`||``|
+|`-fno-force-enable-int128`||`Disable support for int128_t type`|
 |`-fno-gnu-inline-asm`||`Disable GNU style inline asm`|
 |`-fno-integrated-as`||`Disable the integrated assembler`|
 |`-fno-jump-tables`||`Do not use jump tables for lowering switches`|
-|`-fno-lax-vector-conversions`||``|
+|`-fno-lax-vector-conversions`||`Disallow implicit conversions between vectors with a different number of elements or different element types`|
 |`-fno-lto`||`Disable LTO mode (default)`|
-|`-fno-merge-all-constants`||``|
-|`-fno-objc-infer-related-result-type`||``|
+|`-fno-merge-all-constants`||`Disallow merging of constants`|
+|`-fno-objc-infer-related-result-type`||`do not infer Objective-C related result type based on method family`|
 |`-fno-operator-names`||`Do not treat C++ operator name keywords as synonyms for operators`|
 |`-fno-plt`||`Do not use the PLT to make function calls`|
-|`-fno-preserve-as-comments`||``|
+|`-fno-preserve-as-comments`||`Do not preserve comments in inline assembly`|
 |`-fno-profile-generate`||`Disable generation of profile instrumentation.`|
-|`-fno-profile-instr-generate`||``|
+|`-fno-profile-instr-generate`||`Disable generation of profile instrumentation.`|
 |`-fno-profile-instr-use`||`Disable using instrumentation data for profile-guided optimization`|
-|`-fno-register-global-dtors-with-atexit`||``|
+|`-fno-register-global-dtors-with-atexit`||`Don't use atexit or __cxa_atexit to register global destructors`|
 |`-fno-reroll-loops`||`Turn off loop reroller`|
 |`-fno-rtlib-add-rpath`||`Do not add -rpath with architecture-specific resource directory to the linker flags`|
 |`-fno-rtti-data`||`Control emission of RTTI data`|
 |`-fno-rtti`||`Disable generation of rtti information`|
-|`-fno-sanitize-address-poison-custom-array-cookie`||``|
-|`-fno-sanitize-address-use-after-scope`||``|
-|`-fno-sanitize-address-use-odr-indicator`||``|
+|`-fno-sanitize-address-poison-custom-array-cookie`||`Disable poisoning array cookies when using custom operator new[] in AddressSanitizer`|
+|`-fno-sanitize-address-use-after-scope`||`Disable use-after-scope detection in AddressSanitizer`|
+|`-fno-sanitize-address-use-odr-indicator`||`Disable ODR indicator globals`|
 |`-fno-sanitize-blacklist`||`Don't use blacklist file for sanitizers`|
-|`-fno-sanitize-cfi-cross-dso`||``|
-|`-fno-sanitize-coverage=<value>`||``|
-|`-fno-sanitize-memory-track-origins`||``|
-|`-fno-sanitize-memory-use-after-dtor`||``|
-|`-fno-sanitize-recover=<value>`||``|
+|`-fno-sanitize-cfi-cross-dso`||`Disable control flow integrity (CFI) checks for cross-DSO calls.`|
+|`-fno-sanitize-coverage=<value>`||`Disable specified features of coverage instrumentation for Sanitizers`|
+|`-fno-sanitize-memory-track-origins`||`Disable origins tracking in MemorySanitizer`|
+|`-fno-sanitize-memory-use-after-dtor`||`Disable use-after-destroy detection in MemorySanitizer`|
+|`-fno-sanitize-recover=<value>`||`Disable recovery for specified sanitizers`|
 |`-fno-sanitize-stats`||`Disable sanitizer statistics gathering.`|
-|`-fno-sanitize-thread-atomics`||``|
-|`-fno-sanitize-thread-func-entry-exit`||``|
-|`-fno-sanitize-thread-memory-access`||``|
-|`-fno-sanitize-trap=<value>`||``|
+|`-fno-sanitize-thread-atomics`||`Disable atomic operations instrumentation in ThreadSanitizer`|
+|`-fno-sanitize-thread-func-entry-exit`||`Disable function entry/exit instrumentation in ThreadSanitizer`|
+|`-fno-sanitize-thread-memory-access`||`Disable memory access instrumentation in ThreadSanitizer`|
+|`-fno-sanitize-trap=<value>`||`Disable trapping for specified sanitizers`|
 |`-fno-short-wchar`||`Force wchar_t to be an unsigned int`|
 |`-fno-show-column`||`Do not include column number on diagnostics`|
-|`-fno-show-source-location`||``|
+|`-fno-show-source-location`||`Do not include source location information with diagnostics`|
 |`-fno-signed-char`||`Char is unsigned`|
 |`-fno-signed-zeros`||`Allow optimizations that ignore the sign of floating point zeros`|
 |`-fno-spell-checking`||`Disable spell-checking`|
 |`-fno-stack-protector`||`Disable the use of stack protectors`|
 |`-fno-stack-size-section`||`Don't emit section containing metadata on function stack sizes`|
 |`-fno-standalone-debug`||`Limit debug information produced to reduce size of debug binary`|
-|`-fno-strict-float-cast-overflow`||``|
+|`-fno-strict-float-cast-overflow`||`Relax language rules and try to match the behavior of the target's native float-to-int conversion instructions`|
 |`-fno-threadsafe-statics`||`Do not emit code to make initialization of local statics thread safe`|
 |`-fno-trigraphs`||`Do not process trigraph sequences`|
 |`-fno-unroll-loops`||`Turn off loop unroller`|
@@ -269,103 +273,103 @@
 |`-fobjc-runtime=<value>`||`Specify the target Objective-C runtime kind and version`|
 |`-fobjc-weak`||`Enable ARC-style weak references in Objective-C`|
 |`-fopenmp-simd`||`Emit OpenMP code only for SIMD-based constructs.`|
-|`-fopenmp-targets=<value>`||``|
+|`-fopenmp-targets=<value>`||`Specify comma-separated list of triples OpenMP offloading targets to be supported`|
 |`-fopenmp`||`Parse OpenMP pragmas and generate parallel code.`|
-|`-foptimization-record-file=<value>`||``|
-|`-foptimization-record-passes=<value>`||``|
-|`-forder-file-instrumentation`||``|
+|`-foptimization-record-file=<value>`||`Specify the file name of any generated YAML optimization record`|
+|`-foptimization-record-passes=<value>`||`Only include passes which match a specified regular expression in the generated optimization record (by default, include all passes)`|
+|`-forder-file-instrumentation`||`Generate instrumented code to collect order file into default.profraw file (overridden by '=' form of option or LLVM_PROFILE_FILE env var)`|
 |`-fpack-struct=<value>`||`Specify the default maximum struct packing alignment`|
 |`-fpascal-strings`||`Recognize and construct Pascal-style string literals`|
 |`-fpass-plugin=<dsopath>`||`Load pass plugin from a dynamic shared object file (only with new pass manager).`|
 |`-fpcc-struct-return`||`Override the default ABI to return all structs on the stack`|
 |`-fplt`||`Use the PLT to make function calls`|
 |`-fplugin=<dsopath>`||`Load the named plugin (dynamic shared object)`|
-|`-fprebuilt-module-path=<directory>`||``|
-|`-fprofile-exclude-files=<value>`||``|
-|`-fprofile-filter-files=<value>`||``|
-|`-fprofile-generate=<directory>`||``|
+|`-fprebuilt-module-path=<directory>`||`Specify the prebuilt module path`|
+|`-fprofile-exclude-files=<value>`||`Instrument only functions from files where names don't match all the regexes separated by a semi-colon`|
+|`-fprofile-filter-files=<value>`||`Instrument only functions from files where names match any regex separated by a semi-colon`|
+|`-fprofile-generate=<directory>`||`Generate instrumented code to collect execution counts into <directory>/default.profraw (overridden by LLVM_PROFILE_FILE env var)`|
 |`-fprofile-generate`||`Generate instrumented code to collect execution counts into default.profraw (overridden by LLVM_PROFILE_FILE env var)`|
-|`-fprofile-instr-generate=<file>`||``|
-|`-fprofile-instr-generate`||``|
-|`-fprofile-instr-use=<value>`||``|
-|`-fprofile-remapping-file=<file>`||``|
-|`-fprofile-sample-accurate`||``|
-|`-fprofile-sample-use=<value>`||``|
-|`-fprofile-use=<pathname>`||``|
+|`-fprofile-instr-generate=<file>`||`Generate instrumented code to collect execution counts into <file> (overridden by LLVM_PROFILE_FILE env var)`|
+|`-fprofile-instr-generate`||`Generate instrumented code to collect execution counts into default.profraw file (overridden by '=' form of option or LLVM_PROFILE_FILE env var)`|
+|`-fprofile-instr-use=<value>`||`Use instrumentation data for profile-guided optimization`|
+|`-fprofile-remapping-file=<file>`||`Use the remappings described in <file> to match the profile data against names in the program`|
+|`-fprofile-sample-accurate`||`Specifies that the sample profile is accurate`|
+|`-fprofile-sample-use=<value>`||`Enable sample-based profile guided optimizations`|
+|`-fprofile-use=<pathname>`||`Use instrumentation data for profile-guided optimization. If pathname is a directory, it reads from <pathname>/default.profdata. Otherwise, it reads from file <pathname>.`|
 |`-freciprocal-math`||`Allow division operations to be reassociated`|
 |`-freg-struct-return`||`Override the default ABI to return small structs in registers`|
-|`-fregister-global-dtors-with-atexit`||``|
-|`-frelaxed-template-template-args`||``|
+|`-fregister-global-dtors-with-atexit`||`Use atexit or __cxa_atexit to register global destructors`|
+|`-frelaxed-template-template-args`||`Enable C++17 relaxed template template argument matching`|
 |`-freroll-loops`||`Turn on loop reroller`|
 |`-frtlib-add-rpath`||`Add -rpath with architecture-specific resource directory to the linker flags`|
-|`-fsanitize-address-field-padding=<value>`||``|
-|`-fsanitize-address-globals-dead-stripping`||``|
-|`-fsanitize-address-poison-custom-array-cookie`||``|
-|`-fsanitize-address-use-after-scope`||``|
-|`-fsanitize-address-use-odr-indicator`||``|
-|`-fsanitize-blacklist=<value>`||``|
-|`-fsanitize-cfi-cross-dso`||``|
-|`-fsanitize-cfi-icall-generalize-pointers`||``|
-|`-fsanitize-coverage=<value>`||``|
-|`-fsanitize-hwaddress-abi=<value>`||``|
-|`-fsanitize-memory-track-origins=<value>`||``|
-|`-fsanitize-memory-track-origins`||``|
-|`-fsanitize-memory-use-after-dtor`||``|
-|`-fsanitize-recover=<value>`||``|
+|`-fsanitize-address-field-padding=<value>`||`Level of field padding for AddressSanitizer`|
+|`-fsanitize-address-globals-dead-stripping`||`Enable linker dead stripping of globals in AddressSanitizer`|
+|`-fsanitize-address-poison-custom-array-cookie`||`Enable poisoning array cookies when using custom operator new[] in AddressSanitizer`|
+|`-fsanitize-address-use-after-scope`||`Enable use-after-scope detection in AddressSanitizer`|
+|`-fsanitize-address-use-odr-indicator`||`Enable ODR indicator globals to avoid false ODR violation reports in partially sanitized programs at the cost of an increase in binary size`|
+|`-fsanitize-blacklist=<value>`||`Path to blacklist file for sanitizers`|
+|`-fsanitize-cfi-cross-dso`||`Enable control flow integrity (CFI) checks for cross-DSO calls.`|
+|`-fsanitize-cfi-icall-generalize-pointers`||`Generalize pointers in CFI indirect call type signature checks`|
+|`-fsanitize-coverage=<value>`||`Specify the type of coverage instrumentation for Sanitizers`|
+|`-fsanitize-hwaddress-abi=<value>`||`Select the HWAddressSanitizer ABI to target (interceptor or platform, default interceptor)`|
+|`-fsanitize-memory-track-origins=<value>`||`Enable origins tracking in MemorySanitizer`|
+|`-fsanitize-memory-track-origins`||`Enable origins tracking in MemorySanitizer`|
+|`-fsanitize-memory-use-after-dtor`||`Enable use-after-destroy detection in MemorySanitizer`|
+|`-fsanitize-recover=<value>`||`Enable recovery for specified sanitizers`|
 |`-fsanitize-stats`||`Enable sanitizer statistics gathering.`|
-|`-fsanitize-thread-atomics`||``|
-|`-fsanitize-thread-func-entry-exit`||``|
-|`-fsanitize-thread-memory-access`||``|
+|`-fsanitize-thread-atomics`||`Enable atomic operations instrumentation in ThreadSanitizer (default)`|
+|`-fsanitize-thread-func-entry-exit`||`Enable function entry/exit instrumentation in ThreadSanitizer (default)`|
+|`-fsanitize-thread-memory-access`||`Enable memory access instrumentation in ThreadSanitizer (default)`|
 |`-fsanitize-trap=<value>`||`Enable trapping for specified sanitizers`|
-|`-fsanitize-undefined-strip-path-components=<number>`||``|
+|`-fsanitize-undefined-strip-path-components=<number>`||`Strip (or keep only, if negative) a given number of path components when emitting check metadata.`|
 |`-fsanitize=<check>`||`Turn on runtime checks for various forms of undefined or suspicious behavior. See user manual for available checks`|
-|`-fsave-optimization-record`||``|
+|`-fsave-optimization-record`||`Generate a YAML optimization record file`|
 |`-fseh-exceptions`||`Use SEH style exceptions`|
 |`-fshort-enums`||`Allocate to an enum type only as many bytes as it needs for the declared range of possible values`|
 |`-fshort-wchar`||`Force wchar_t to be a short unsigned int`|
-|`-fshow-overloads=<value>`||``|
+|`-fshow-overloads=<value>`||`Which overload candidates to show when overload resolution fails: best|all; defaults to all`|
 |`-fsized-deallocation`||`Enable C++14 sized global deallocation functions`|
 |`-fsjlj-exceptions`||`Use SjLj style exceptions`|
 |`-fslp-vectorize`||`Enable the superword-level parallelism vectorization passes`|
 |`-fsplit-dwarf-inlining`||`Provide minimal debug info in the object/executable to facilitate online symbolication/stack traces in the absence of .dwo/.dwp files when using Split DWARF`|
 |`-fsplit-lto-unit`||`Enables splitting of the LTO unit.`|
 |`-fstack-protector-all`||`Enable stack protectors for all functions`|
-|`-fstack-protector-strong`||``|
+|`-fstack-protector-strong`||`Enable stack protectors for some functions vulnerable to stack smashing. Compared to -fstack-protector, this uses a stronger heuristic that includes functions containing arrays of any size (and any type), as well as any calls to alloca or the taking of an address from a local variable`|
 |`-fstack-protector`||`Enable stack protectors for some functions vulnerable to stack smashing. This uses a loose heuristic which considers functions vulnerable if they contain a char (or 8bit integer) array or constant sized calls to alloca, which are of greater size than ssp-buffer-size (default: 8 bytes). All variable sized calls to alloca are considered vulnerable`|
 |`-fstack-size-section`||`Emit section containing metadata on function stack sizes`|
 |`-fstandalone-debug`||`Emit full debug info for all types used by the program`|
 |`-fstrict-enums`||`Enable optimizations based on the strict definition of an enum's value range`|
-|`-fstrict-float-cast-overflow`||``|
+|`-fstrict-float-cast-overflow`||`Assume that overflowing float-to-int casts are undefined (default)`|
 |`-fstrict-return`||`Always treat control flow paths that fall off the end of a non-void function as unreachable`|
-|`-fstrict-vtable-pointers`||``|
+|`-fstrict-vtable-pointers`||`Enable optimizations based on the strict rules for overwriting polymorphic C++ objects`|
 |`-fthinlto-index=<value>`||`Perform ThinLTO importing using provided function summary index`|
 |`-ftrap-function=<value>`||`Issue call to specified function rather than a trap instruction`|
-|`-ftrapv-handler=<function name>`||``|
+|`-ftrapv-handler=<function name>`||`Specify the function to be called on overflow`|
 |`-ftrapv`||`Trap on integer overflow`|
 |`-ftrigraphs`||`Process trigraph sequences`|
-|`-ftrivial-auto-var-init=<value>`||``|
+|`-ftrivial-auto-var-init=<value>`||`Initialize trivial automatic stack variables: uninitialized (default) | pattern`|
 |`-funique-section-names`||`Use unique names for text and data sections (ELF Only)`|
 |`-funroll-loops`||`Turn on loop unroller`|
 |`-fuse-init-array`||`Use .init_array instead of .ctors`|
 |`-fveclib=<value>`||`Use the given vector functions library`|
 |`-fvectorize`||`Enable the loop vectorization passes`|
-|`-fvisibility-global-new-delete-hidden`||``|
-|`-fvisibility-inlines-hidden`||``|
+|`-fvisibility-global-new-delete-hidden`||`Give global C++ operator new and delete declarations hidden visibility`|
+|`-fvisibility-inlines-hidden`||`Give inline C++ member functions hidden visibility by default`|
 |`-fvisibility-ms-compat`||`Give global types 'default' visibility and global functions and variables 'hidden' visibility by default`|
 |`-fvisibility=<value>`||`Set the default symbol visibility for all global declarations`|
 |`-fwhole-program-vtables`||`Enables whole-program vtable optimization. Requires -flto`|
 |`-fwrapv`||`Treat signed integer overflow as two's complement`|
 |`-fwritable-strings`||`Store string literals as writable data`|
-|`-fxray-always-emit-customevents`||``|
-|`-fxray-always-emit-typedevents`||``|
-|`-fxray-always-instrument= <value>`||``|
-|`-fxray-attr-list= <value>`||``|
-|`-fxray-instruction-threshold= <value>`||``|
-|`-fxray-instrumentation-bundle= <value>`||``|
+|`-fxray-always-emit-customevents`||`Determine whether to always emit __xray_customevent(...) calls even if the function it appears in is not always instrumented.`|
+|`-fxray-always-emit-typedevents`||`Determine whether to always emit __xray_typedevent(...) calls even if the function it appears in is not always instrumented.`|
+|`-fxray-always-instrument= <value>`||`DEPRECATED: Filename defining the whitelist for imbuing the 'always instrument' XRay attribute.`|
+|`-fxray-attr-list= <value>`||`Filename defining the list of functions/types for imbuing XRay attributes.`|
+|`-fxray-instruction-threshold= <value>`||`Sets the minimum function size to instrument with XRay`|
+|`-fxray-instrumentation-bundle= <value>`||`Select which XRay instrumentation points to emit. Options: all, none, function, custom. Default is 'all'.`|
 |`-fxray-instrument`||`Generate XRay instrumentation sleds on function entry and exit`|
 |`-fxray-link-deps`||`Tells clang to add the link dependencies for XRay.`|
 |`-fxray-modes= <value>`||`List of modes to link in by default into XRay instrumented binaries.`|
-|`-fxray-never-instrument= <value>`||``|
+|`-fxray-never-instrument= <value>`||`DEPRECATED: Filename defining the whitelist for imbuing the 'never instrument' XRay attribute.`|
 |`-fzvector`||`Enable System z vector language extension`|
 |`-F <value>`||`Add directory to framework include search path`|
 |`--gcc-toolchain=<value>`||`Use the gcc toolchain at the given directory`|
@@ -387,13 +391,13 @@
 |`-g`||`Generate source-level debug information`|
 |`--help-hidden`||`Display help for hidden options`|
 |`-help`||`Display available options`|
-|`--hip-device-lib-path=<value>`||``|
-|`--hip-device-lib=<value>`||``|
+|`--hip-device-lib-path=<value>`||`HIP device library path`|
+|`--hip-device-lib=<value>`||`HIP device library`|
 |`--hip-link`||`Link clang-offload-bundler bundles for HIP`|
 |`-H`||`Show header includes and nesting depth`|
 |`-I-`||`Restrict all prior -I flags to double-quoted inclusion and remove current directory from include path`|
 |`-idirafter <value>`||`Add directory to AFTER include search path`|
-|`-iframeworkwithsysroot <directory>`||``|
+|`-iframeworkwithsysroot <directory>`||`Add directory to SYSTEM framework search path, absolute paths are relative to -isysroot`|
 |`-iframework <value>`||`Add directory to SYSTEM framework search path`|
 |`-imacros <file>`||`Include macros from file before parsing`|
 |`-include-pch <file>`||`Include precompiled header file`|
@@ -402,19 +406,19 @@
 |`-iprefix <dir>`||`Set the -iwithprefix/-iwithprefixbefore prefix`|
 |`-iquote <directory>`||`Add directory to QUOTE include search path`|
 |`-isysroot <dir>`||`Set the system root directory (usually /)`|
-|`-isystem-after <directory>`||``|
+|`-isystem-after <directory>`||`Add directory to end of the SYSTEM include search path`|
 |`-isystem <directory>`||`Add directory to SYSTEM include search path`|
 |`-ivfsoverlay <value>`||`Overlay the virtual filesystem described by file over the real file system`|
-|`-iwithprefixbefore <dir>`||``|
+|`-iwithprefixbefore <dir>`||`Set directory to include search path with prefix`|
 |`-iwithprefix <dir>`||`Set directory to SYSTEM include search path with prefix`|
-|`-iwithsysroot <directory>`||``|
+|`-iwithsysroot <directory>`||`Add directory to SYSTEM include search path, absolute paths are relative to -isysroot`|
 |`-I <dir>`||`Add directory to include search path`|
-|`--libomptarget-nvptx-path=<value>`||``|
+|`--libomptarget-nvptx-path=<value>`||`Path to libomptarget-nvptx libraries`|
 |`-L <dir>`||`Add directory to library search path`|
 |`-mabicalls`||`Enable SVR4-style position-independent code (Mips only)`|
 |`-malign-double`||`Align doubles to two words in structs (x86 only)`|
 |`-mbackchain`||`Link stack frames through backchain on System Z`|
-|`-mbranch-protection=<value>`||``|
+|`-mbranch-protection=<value>`||`Enforce targets of indirect branches and function returns`|
 |`-mcode-object-v3`||`Enable code object v3 (AMDGPU only)`|
 |`-mcrc`||`Allow use of CRC instructions (ARM/Mips only)`|
 |`-MD`||`Write a depfile containing user and system headers`|
@@ -436,14 +440,14 @@
 |`-mhvx`||`Enable Hexagon Vector eXtensions`|
 |`-miamcu`||`Use Intel MCU ABI`|
 |`--migrate`||`Run the migrator`|
-|`-mincremental-linker-compatible`||``|
+|`-mincremental-linker-compatible`||`(integrated-as) Emit an object file which can be used with an incremental linker`|
 |`-mindirect-jump=<value>`||`Change indirect jump instructions to inhibit speculation`|
-|`-mios-version-min=<value>`||``|
+|`-mios-version-min=<value>`||`Set iOS deployment target`|
 |`-MJ <value>`||`Write a compilation database entry per input`|
 |`-mllvm <value>`||`Additional arguments to forward to LLVM's option processing`|
 |`-mlocal-sdata`||`Extend the -G behaviour to object local data (MIPS)`|
 |`-mlong-calls`||`Generate branches with extended addressability, usually via indirect jumps.`|
-|`-mmacosx-version-min=<value>`||``|
+|`-mmacosx-version-min=<value>`||`Set Mac OS X deployment target`|
 |`-mmadd4`||`Enable the generation of 4-operand madd.s, madd.d and related instructions.`|
 |`-MMD`||`Write a depfile containing user headers`|
 |`-mmemops`||`Enable generation of memop instructions`|
@@ -457,12 +461,12 @@
 |`-mno-embedded-data`||`Do not place constants in the .rodata section instead of the .sdata if they meet the -G <size> threshold (MIPS)`|
 |`-mno-execute-only`||`Allow generation of data access to code sections (ARM only)`|
 |`-mno-extern-sdata`||`Do not assume that externally defined data is in the small data if it meets the -G <size> threshold (MIPS)`|
-|`-mno-fix-cortex-a53-835769`||``|
+|`-mno-fix-cortex-a53-835769`||`Don't workaround Cortex-A53 erratum 835769 (AArch64 only)`|
 |`-mno-global-merge`||`Disable merging of globals`|
 |`-mno-gpopt`||`Do not use GP relative accesses for symbols known to be in a small data section (MIPS)`|
 |`-mno-hvx`||`Disable Hexagon Vector eXtensions`|
 |`-mno-implicit-float`||`Don't generate implicit floating point instructions`|
-|`-mno-incremental-linker-compatible`||``|
+|`-mno-incremental-linker-compatible`||`(integrated-as) Emit an object file which cannot be used with an incremental linker`|
 |`-mno-local-sdata`||`Do not extend the -G behaviour to object local data (MIPS)`|
 |`-mno-long-calls`||`Restore the default behaviour of not generating long calls`|
 |`-mno-madd4`||`Disable the generation of 4-operand madd.s, madd.d and related instructions.`|
@@ -480,19 +484,19 @@
 |`-mno-restrict-it`||`Allow generation of deprecated IT blocks for ARMv8. It is off by default for ARMv8 Thumb mode`|
 |`-mno-sram-ecc`||`Disable SRAM ECC (AMDGPU only)`|
 |`-mno-stack-arg-probe`||`Disable stack probes which are enabled by default`|
-|`-mno-tls-direct-seg-refs`||``|
+|`-mno-tls-direct-seg-refs`||`Disable direct TLS access through segment registers`|
 |`-mno-unaligned-access`||`Force all memory accesses to be aligned (AArch32/AArch64 only)`|
 |`-mno-xnack`||`Disable XNACK (AMDGPU only)`|
 |`-mnocrc`||`Disallow use of CRC instructions (ARM only)`|
 |`-mnvj`||`Enable generation of new-value jumps`|
 |`-mnvs`||`Enable generation of new-value stores`|
-|`-module-dependency-dir <value>`||``|
+|`-module-dependency-dir <value>`||`Directory to dump module dependencies to`|
 |`-module-file-info`||`Provide information about a particular module file`|
-|`-momit-leaf-frame-pointer`||``|
+|`-momit-leaf-frame-pointer`||`Omit frame pointer setup for leaf functions`|
 |`-moutline`||`Enable function outlining (AArch64 only)`|
 |`-mpackets`||`Enable generation of instruction packets`|
 |`-mpie-copy-relocations`||`Use copy relocations support for PIE builds`|
-|`-mprefer-vector-width=<value>`||``|
+|`-mprefer-vector-width=<value>`||`Specifies preferred vector width for auto-vectorization. Defaults to 'none' which allows target specific decisions.`|
 |`-MP`||`Create phony target for each dependency (other than main file)`|
 |`-mqdsp6-compat`||`Enable hexagon-qdsp6 backward compatibility`|
 |`-MQ <value>`||`Specify name of main file output to quote in depfile`|
@@ -500,12 +504,12 @@
 |`-mrelax`||`Enable linker relaxation`|
 |`-mrestrict-it`||`Disallow generation of deprecated IT blocks for ARMv8. It is on by default for ARMv8 Thumb mode.`|
 |`-mrtd`||`Make StdCall calling convention the default`|
-|`-msign-return-address=<value>`||``|
+|`-msign-return-address=<value>`||`Select return address signing scope`|
 |`-msoft-float`||`Use software floating point`|
 |`-msram-ecc`||`Enable SRAM ECC (AMDGPU only)`|
-|`-mstack-alignment=<value>`||``|
+|`-mstack-alignment=<value>`||`Set the stack alignment`|
 |`-mstack-arg-probe`||`Enable stack probes`|
-|`-mstack-probe-size=<value>`||``|
+|`-mstack-probe-size=<value>`||`Set the stack probe size`|
 |`-mstackrealign`||`Force realign the stack at entry to every function`|
 |`-mthread-model <value>`||`The thread model to use, e.g. posix, single (posix by default)`|
 |`-mtls-direct-seg-refs`||`Enable direct TLS access through segment registers (default)`|
@@ -515,29 +519,29 @@
 |`-MV`||`Use NMake/Jom format for the depfile`|
 |`-mxnack`||`Enable XNACK (AMDGPU only)`|
 |`-M`||`Like -MD, but also implies -E and writes to stdout by default`|
-|`--no-cuda-gpu-arch=<value>`||``|
-|`--no-cuda-include-ptx=<value>`||``|
+|`--no-cuda-gpu-arch=<value>`||`Remove GPU architecture (e.g. sm_35) from the list of GPUs to compile for. 'all' resets the list to its default value.`|
+|`--no-cuda-include-ptx=<value>`||`Do not include PTX for the following GPU architecture (e.g. sm_35) or 'all'. May be specified more than once.`|
 |`--no-cuda-version-check`||`Don't error out if the detected version of the CUDA install is too low for the requested CUDA gpu architecture.`|
-|`--no-system-header-prefix=<prefix>`||``|
+|`--no-system-header-prefix=<prefix>`||`Treat all #include paths starting with <prefix> as not including a system header.`|
 |`-nobuiltininc`||`Disable builtin #include directories`|
 |`-nostdinc++`||`Disable standard #include directories for the C++ standard library`|
 |`-ObjC++`||`Treat source input files as Objective-C++ inputs`|
 |`-objcmt-atomic-property`||`Make migration to 'atomic' properties`|
 |`-objcmt-migrate-all`||`Enable migration to modern ObjC`|
-|`-objcmt-migrate-annotation`||``|
-|`-objcmt-migrate-designated-init`||``|
-|`-objcmt-migrate-instancetype`||``|
-|`-objcmt-migrate-literals`||``|
-|`-objcmt-migrate-ns-macros`||``|
-|`-objcmt-migrate-property-dot-syntax`||``|
-|`-objcmt-migrate-property`||``|
-|`-objcmt-migrate-protocol-conformance`||``|
-|`-objcmt-migrate-readonly-property`||``|
-|`-objcmt-migrate-readwrite-property`||``|
-|`-objcmt-migrate-subscripting`||``|
-|`-objcmt-ns-nonatomic-iosonly`||``|
-|`-objcmt-returns-innerpointer-property`||``|
-|`-objcmt-whitelist-dir-path=<value>`||``|
+|`-objcmt-migrate-annotation`||`Enable migration to property and method annotations`|
+|`-objcmt-migrate-designated-init`||`Enable migration to infer NS_DESIGNATED_INITIALIZER for initializer methods`|
+|`-objcmt-migrate-instancetype`||`Enable migration to infer instancetype for method result type`|
+|`-objcmt-migrate-literals`||`Enable migration to modern ObjC literals`|
+|`-objcmt-migrate-ns-macros`||`Enable migration to NS_ENUM/NS_OPTIONS macros`|
+|`-objcmt-migrate-property-dot-syntax`||`Enable migration of setter/getter messages to property-dot syntax`|
+|`-objcmt-migrate-property`||`Enable migration to modern ObjC property`|
+|`-objcmt-migrate-protocol-conformance`||`Enable migration to add protocol conformance on classes`|
+|`-objcmt-migrate-readonly-property`||`Enable migration to modern ObjC readonly property`|
+|`-objcmt-migrate-readwrite-property`||`Enable migration to modern ObjC readwrite property`|
+|`-objcmt-migrate-subscripting`||`Enable migration to modern ObjC subscripting`|
+|`-objcmt-ns-nonatomic-iosonly`||`Enable migration to use NS_NONATOMIC_IOSONLY macro for setting property's 'atomic' attribute`|
+|`-objcmt-returns-innerpointer-property`||`Enable migration to annotate property with NS_RETURNS_INNER_POINTER`|
+|`-objcmt-whitelist-dir-path=<value>`||`Only modify files with a filename contained in the provided directory path`|
 |`-ObjC`||`Treat source input files as Objective-C inputs`|
 |`-o <file>`||`Write output to <file>`|
 |`-pg`||`Enable mcount instrumentation`|
@@ -569,12 +573,12 @@
 |`-save-stats`||`Save llvm statistics.`|
 |`-save-temps=<value>`||`Save intermediate compilation results.`|
 |`-save-temps`||`Save intermediate compilation results`|
-|`-serialize-diagnostics <value>`||``|
+|`-serialize-diagnostics <value>`||`Serialize compiler diagnostics to a file`|
 |`-shared-libsan`||`Dynamically link the sanitizer runtime`|
 |`-static-libsan`||`Statically link the sanitizer runtime`|
 |`-std=<value>`||`Language standard to compile for`|
 |`-stdlib=<value>`||`C++ standard library to use`|
-|`--system-header-prefix=<prefix>`||``|
+|`--system-header-prefix=<prefix>`||`Treat all #include paths starting with <prefix> as including a system header.`|
 |`-S`||`Only run preprocess and compilation steps`|
 |`--target=<value>`||`Generate code for the given target`|
 |`-Tbss <addr>`||`Set starting address of BSS to <addr>`|
@@ -594,7 +598,7 @@
 |`-Wa,<arg>`||`Pass the comma separated arguments in <arg> to the assembler`|
 |`-Wdeprecated`||`Enable warnings for deprecated constructs and define __DEPRECATED`|
 |`-Wl,<arg>`||`Pass the comma separated arguments in <arg> to the linker`|
-|`-working-directory <value>`||``|
+|`-working-directory <value>`||`Resolve file paths relative to the specified directory`|
 |`-Wp,<arg>`||`Pass the comma separated arguments in <arg> to the preprocessor`|
 |`-W<warning>`||`Enable the specified warning`|
 |`-w`||`Suppress all warnings`|
@@ -604,7 +608,7 @@
 |`-Xcuda-fatbinary <arg>`||`Pass <arg> to fatbinary invocation`|
 |`-Xcuda-ptxas <arg>`||`Pass <arg> to the ptxas assembler`|
 |`-Xlinker <arg>`||`Pass <arg> to the linker`|
-|`-Xopenmp-target=<triple> <arg>`||``|
+|`-Xopenmp-target=<triple> <arg>`||`Pass <arg> to the target offloading toolchain identified by <triple>.`|
 |`-Xopenmp-target <arg>`||`Pass <arg> to the target offloading toolchain.`|
 |`-Xpreprocessor <arg>`||`Pass <arg> to the preprocessor`|
 |`-x <language>`||`Treat subsequent input files as having type <language>`|
