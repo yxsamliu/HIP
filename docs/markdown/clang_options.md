@@ -4,7 +4,7 @@
 |Option|Support|Description|
 |-------|------|-------|
 |`-###`||`Print (but do not run) the commands to run for this compilation`|
-|`--analyzer-output <value>`||`Static analyzer report output format (html|plist|plist-multi-file|plist-html|text).`|
+|`--analyzer-output <value>`||`Static analyzer report output format (html\|plist\|plist-multi-file\|plist-html\|text).`|
 |`--analyze`||`Run the static analyzer`|
 |`-arcmt-migrate-emit-errors`||`Emit ARC errors even if the migrator can fix them`|
 |`-arcmt-migrate-report-output <value>`||`Output path for the plist report`|
@@ -144,7 +144,7 @@
 |`-ffixed-x9`||`Reserve the 9 register (AArch64 only)`|
 |`-fforce-emit-vtables`||`Emits more virtual tables to improve devirtualization`|
 |`-fforce-enable-int128`||`Enable support for int128_t type`|
-|`-ffp-contract=<value>`||`Form fused FP ops (e.g. FMAs): fast (everywhere) | on (according to FP_CONTRACT pragma, default) | off (never fuse)`|
+|`-ffp-contract=<value>`||`Form fused FP ops (e.g. FMAs): fast (everywhere) \| on (according to FP_CONTRACT pragma, default) \| off (never fuse)`|
 |`-ffreestanding`||`Assert that the compilation takes place in a freestanding environment`|
 |`-ffunction-sections`||`Place each function in its own section (ELF Only)`|
 |`-fgnu-keywords`||`Allow GNU-extension keywords regardless of language standard`|
@@ -323,7 +323,7 @@
 |`-fseh-exceptions`||`Use SEH style exceptions`|
 |`-fshort-enums`||`Allocate to an enum type only as many bytes as it needs for the declared range of possible values`|
 |`-fshort-wchar`||`Force wchar_t to be a short unsigned int`|
-|`-fshow-overloads=<value>`||`Which overload candidates to show when overload resolution fails: best|all; defaults to all`|
+|`-fshow-overloads=<value>`||`Which overload candidates to show when overload resolution fails: best\|all; defaults to all`|
 |`-fsized-deallocation`||`Enable C++14 sized global deallocation functions`|
 |`-fsjlj-exceptions`||`Use SjLj style exceptions`|
 |`-fslp-vectorize`||`Enable the superword-level parallelism vectorization passes`|
@@ -343,7 +343,7 @@
 |`-ftrapv-handler=<function name>`||`Specify the function to be called on overflow`|
 |`-ftrapv`||`Trap on integer overflow`|
 |`-ftrigraphs`||`Process trigraph sequences`|
-|`-ftrivial-auto-var-init=<value>`||`Initialize trivial automatic stack variables: uninitialized (default) | pattern`|
+|`-ftrivial-auto-var-init=<value>`||`Initialize trivial automatic stack variables: uninitialized (default) \| pattern`|
 |`-funique-section-names`||`Use unique names for text and data sections (ELF Only)`|
 |`-funroll-loops`||`Turn on loop unroller`|
 |`-fuse-init-array`||`Use .init_array instead of .ctors`|

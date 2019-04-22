@@ -16,8 +16,8 @@ $clang --help | sed '1,5d'|  while read a b; do
   if [[ "$a" != "-"* ]]; then
     desc="$a $b"
   elif [[ "$b" = *'>'* ]]; then
-    opt=$(echo $a $b| sed 's:\(^-[^ ]*[= ]*<[^<>]*>\) *\(.*\):\1:')
-    desc=$(echo $a $b| sed 's:\(^-[^ ]*[= ]*<[^<>]*>\) *\(.*\):\2:')
+    opt=$(echo $a $b| sed -e 's:\(^-[^ ]*[= ]*<[^<>]*>\) *\(.*\):\1:')
+    desc=$(echo $a $b| sed -e 's:\(^-[^ ]*[= ]*<[^<>]*>\) *\(.*\):\2:')
     if [[ "$opt" == "$desc" ]]; then
       opt="$a"
       desc="$b"
@@ -26,6 +26,11 @@ $clang --help | sed '1,5d'|  while read a b; do
     opt="$a"
     desc="$b"
   fi
+    desc=$(echo "$desc"| sed -e 's:|:\\|:g')
+    #echo a=$a
+    #echo b=$b
+    #echo opt=$opt
+    #echo desc=$desc
   if [[ "$desc" != "" ]]; then
     echo '|`'$opt'`||`'$desc'`|'
   fi
