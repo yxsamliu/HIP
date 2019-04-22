@@ -26,12 +26,23 @@ $clang --help | sed '1,5d'|  while read a b; do
     opt="$a"
     desc="$b"
   fi
-    desc=$(echo "$desc"| sed -e 's:|:\\|:g')
-    #echo a=$a
-    #echo b=$b
-    #echo opt=$opt
-    #echo desc=$desc
+  supp=
+  if [[ "$desc" = *AArch* ||\
+	"$desc" = *MIPS* || \
+	"$desc" = *ARM* || \
+	"$desc" = *Objective-C* ]]; then
+    supp="Unsupported"
+  elif [[ "$desc" = *OpenCL* ||\
+	"$desc" = *HIP* || \
+	"$desc" = *AMDGPU* ]]; then
+    supp="Supported"
+  fi
+  desc=$(echo "$desc"| sed -e 's:|:\\|:g')
+  #echo a=$a
+  #echo b=$b
+  #echo opt=$opt
+  #echo desc=$desc
   if [[ "$desc" != "" ]]; then
-    echo '|`'$opt'`||`'$desc'`|'
+    echo '|`'$opt'`|'$supp'|`'$desc'`|'
   fi
 done

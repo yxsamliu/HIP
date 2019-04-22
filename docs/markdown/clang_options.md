@@ -11,19 +11,19 @@
 |`-B <dir>`||`Add <dir> to search path for binaries and object files used implicitly`|
 |`-CC`||`Include comments from within macros in preprocessed output`|
 |`-cfguard`||`Emit tables required for Windows Control Flow Guard.`|
-|`-cl-denorms-are-zero`||`OpenCL only. Allow denormals to be flushed to zero.`|
-|`-cl-fast-relaxed-math`||`OpenCL only. Sets -cl-finite-math-only and -cl-unsafe-math-optimizations, and defines __FAST_RELAXED_MATH__.`|
-|`-cl-finite-math-only`||`OpenCL only. Allow floating-point optimizations that assume arguments and results are not NaNs or +-Inf.`|
-|`-cl-fp32-correctly-rounded-divide-sqrt`||`OpenCL only. Specify that single precision floating-point divide and sqrt used in the program source are correctly rounded.`|
-|`-cl-kernel-arg-info`||`OpenCL only. Generate kernel argument metadata.`|
-|`-cl-mad-enable`||`OpenCL only. Allow use of less precise MAD computations in the generated binary.`|
-|`-cl-no-signed-zeros`||`OpenCL only. Allow use of less precise no signed zeros computations in the generated binary.`|
-|`-cl-opt-disable`||`OpenCL only. This option disables all optimizations. By default optimizations are enabled.`|
-|`-cl-single-precision-constant`||`OpenCL only. Treat double precision floating-point constant as single precision constant.`|
-|`-cl-std=<value>`||`OpenCL language standard to compile for.`|
-|`-cl-strict-aliasing`||`OpenCL only. This option is added for compatibility with OpenCL 1.0.`|
-|`-cl-uniform-work-group-size`||`OpenCL only. Defines that the global work-size be a multiple of the work-group size specified to clEnqueueNDRangeKernel`|
-|`-cl-unsafe-math-optimizations`||`OpenCL only. Allow unsafe floating-point optimizations. Also implies -cl-no-signed-zeros and -cl-mad-enable.`|
+|`-cl-denorms-are-zero`|Supported|`OpenCL only. Allow denormals to be flushed to zero.`|
+|`-cl-fast-relaxed-math`|Supported|`OpenCL only. Sets -cl-finite-math-only and -cl-unsafe-math-optimizations, and defines __FAST_RELAXED_MATH__.`|
+|`-cl-finite-math-only`|Supported|`OpenCL only. Allow floating-point optimizations that assume arguments and results are not NaNs or +-Inf.`|
+|`-cl-fp32-correctly-rounded-divide-sqrt`|Supported|`OpenCL only. Specify that single precision floating-point divide and sqrt used in the program source are correctly rounded.`|
+|`-cl-kernel-arg-info`|Supported|`OpenCL only. Generate kernel argument metadata.`|
+|`-cl-mad-enable`|Supported|`OpenCL only. Allow use of less precise MAD computations in the generated binary.`|
+|`-cl-no-signed-zeros`|Supported|`OpenCL only. Allow use of less precise no signed zeros computations in the generated binary.`|
+|`-cl-opt-disable`|Supported|`OpenCL only. This option disables all optimizations. By default optimizations are enabled.`|
+|`-cl-single-precision-constant`|Supported|`OpenCL only. Treat double precision floating-point constant as single precision constant.`|
+|`-cl-std=<value>`|Supported|`OpenCL language standard to compile for.`|
+|`-cl-strict-aliasing`|Supported|`OpenCL only. This option is added for compatibility with OpenCL 1.0.`|
+|`-cl-uniform-work-group-size`|Supported|`OpenCL only. Defines that the global work-size be a multiple of the work-group size specified to clEnqueueNDRangeKernel`|
+|`-cl-unsafe-math-optimizations`|Supported|`OpenCL only. Allow unsafe floating-point optimizations. Also implies -cl-no-signed-zeros and -cl-mad-enable.`|
 |`--config <value>`||`Specifies configuration file`|
 |`--cuda-compile-host-device`||`Compile CUDA code for both host and device (default). Has no effect on non-CUDA compilations.`|
 |`--cuda-device-only`||`Compile CUDA code for device only`|
@@ -59,15 +59,15 @@
 |`-fbuild-session-timestamp=<time since Epoch in seconds>`||`Time when the current build session started`|
 |`-fbuiltin-module-map`||`Load the clang builtins module map file.`|
 |`-fc++-static-destructors`||`Enable C++ static destructor registration (the default)`|
-|`-fcall-saved-x10`||`Make the x10 register call-saved (AArch64 only)`|
-|`-fcall-saved-x11`||`Make the x11 register call-saved (AArch64 only)`|
-|`-fcall-saved-x12`||`Make the x12 register call-saved (AArch64 only)`|
-|`-fcall-saved-x13`||`Make the x13 register call-saved (AArch64 only)`|
-|`-fcall-saved-x14`||`Make the x14 register call-saved (AArch64 only)`|
-|`-fcall-saved-x15`||`Make the x15 register call-saved (AArch64 only)`|
-|`-fcall-saved-x18`||`Make the x18 register call-saved (AArch64 only)`|
-|`-fcall-saved-x8`||`Make the x8 register call-saved (AArch64 only)`|
-|`-fcall-saved-x9`||`Make the x9 register call-saved (AArch64 only)`|
+|`-fcall-saved-x10`|Unsupported|`Make the x10 register call-saved (AArch64 only)`|
+|`-fcall-saved-x11`|Unsupported|`Make the x11 register call-saved (AArch64 only)`|
+|`-fcall-saved-x12`|Unsupported|`Make the x12 register call-saved (AArch64 only)`|
+|`-fcall-saved-x13`|Unsupported|`Make the x13 register call-saved (AArch64 only)`|
+|`-fcall-saved-x14`|Unsupported|`Make the x14 register call-saved (AArch64 only)`|
+|`-fcall-saved-x15`|Unsupported|`Make the x15 register call-saved (AArch64 only)`|
+|`-fcall-saved-x18`|Unsupported|`Make the x18 register call-saved (AArch64 only)`|
+|`-fcall-saved-x8`|Unsupported|`Make the x8 register call-saved (AArch64 only)`|
+|`-fcall-saved-x9`|Unsupported|`Make the x9 register call-saved (AArch64 only)`|
 |`-fcf-protection=<value>`||`Instrument control-flow architecture protection. Options: return, branch, full, none.`|
 |`-fcf-protection`||`Enable cf-protection in 'full' mode`|
 |`-fchar8_t`||`Enable C++ builtin type char8_t`|
@@ -117,38 +117,38 @@
 |`-ffine-grained-bitfield-accesses`||`Use separate accesses for consecutive bitfield runs with legal widths and alignments.`|
 |`-ffixed-point`||`Enable fixed point types`|
 |`-ffixed-r19`||`Reserve register r19 (Hexagon only)`|
-|`-ffixed-r9`||`Reserve the r9 register (ARM only)`|
-|`-ffixed-x10`||`Reserve the 10 register (AArch64 only)`|
-|`-ffixed-x11`||`Reserve the 11 register (AArch64 only)`|
-|`-ffixed-x12`||`Reserve the 12 register (AArch64 only)`|
-|`-ffixed-x13`||`Reserve the 13 register (AArch64 only)`|
-|`-ffixed-x14`||`Reserve the 14 register (AArch64 only)`|
-|`-ffixed-x15`||`Reserve the 15 register (AArch64 only)`|
-|`-ffixed-x18`||`Reserve the 18 register (AArch64 only)`|
-|`-ffixed-x1`||`Reserve the 1 register (AArch64 only)`|
-|`-ffixed-x20`||`Reserve the 20 register (AArch64 only)`|
-|`-ffixed-x21`||`Reserve the 21 register (AArch64 only)`|
-|`-ffixed-x22`||`Reserve the 22 register (AArch64 only)`|
-|`-ffixed-x23`||`Reserve the 23 register (AArch64 only)`|
-|`-ffixed-x24`||`Reserve the 24 register (AArch64 only)`|
-|`-ffixed-x25`||`Reserve the 25 register (AArch64 only)`|
-|`-ffixed-x26`||`Reserve the 26 register (AArch64 only)`|
-|`-ffixed-x27`||`Reserve the 27 register (AArch64 only)`|
-|`-ffixed-x28`||`Reserve the 28 register (AArch64 only)`|
-|`-ffixed-x2`||`Reserve the 2 register (AArch64 only)`|
-|`-ffixed-x3`||`Reserve the 3 register (AArch64 only)`|
-|`-ffixed-x4`||`Reserve the 4 register (AArch64 only)`|
-|`-ffixed-x5`||`Reserve the 5 register (AArch64 only)`|
-|`-ffixed-x6`||`Reserve the 6 register (AArch64 only)`|
-|`-ffixed-x7`||`Reserve the 7 register (AArch64 only)`|
-|`-ffixed-x9`||`Reserve the 9 register (AArch64 only)`|
+|`-ffixed-r9`|Unsupported|`Reserve the r9 register (ARM only)`|
+|`-ffixed-x10`|Unsupported|`Reserve the 10 register (AArch64 only)`|
+|`-ffixed-x11`|Unsupported|`Reserve the 11 register (AArch64 only)`|
+|`-ffixed-x12`|Unsupported|`Reserve the 12 register (AArch64 only)`|
+|`-ffixed-x13`|Unsupported|`Reserve the 13 register (AArch64 only)`|
+|`-ffixed-x14`|Unsupported|`Reserve the 14 register (AArch64 only)`|
+|`-ffixed-x15`|Unsupported|`Reserve the 15 register (AArch64 only)`|
+|`-ffixed-x18`|Unsupported|`Reserve the 18 register (AArch64 only)`|
+|`-ffixed-x1`|Unsupported|`Reserve the 1 register (AArch64 only)`|
+|`-ffixed-x20`|Unsupported|`Reserve the 20 register (AArch64 only)`|
+|`-ffixed-x21`|Unsupported|`Reserve the 21 register (AArch64 only)`|
+|`-ffixed-x22`|Unsupported|`Reserve the 22 register (AArch64 only)`|
+|`-ffixed-x23`|Unsupported|`Reserve the 23 register (AArch64 only)`|
+|`-ffixed-x24`|Unsupported|`Reserve the 24 register (AArch64 only)`|
+|`-ffixed-x25`|Unsupported|`Reserve the 25 register (AArch64 only)`|
+|`-ffixed-x26`|Unsupported|`Reserve the 26 register (AArch64 only)`|
+|`-ffixed-x27`|Unsupported|`Reserve the 27 register (AArch64 only)`|
+|`-ffixed-x28`|Unsupported|`Reserve the 28 register (AArch64 only)`|
+|`-ffixed-x2`|Unsupported|`Reserve the 2 register (AArch64 only)`|
+|`-ffixed-x3`|Unsupported|`Reserve the 3 register (AArch64 only)`|
+|`-ffixed-x4`|Unsupported|`Reserve the 4 register (AArch64 only)`|
+|`-ffixed-x5`|Unsupported|`Reserve the 5 register (AArch64 only)`|
+|`-ffixed-x6`|Unsupported|`Reserve the 6 register (AArch64 only)`|
+|`-ffixed-x7`|Unsupported|`Reserve the 7 register (AArch64 only)`|
+|`-ffixed-x9`|Unsupported|`Reserve the 9 register (AArch64 only)`|
 |`-fforce-emit-vtables`||`Emits more virtual tables to improve devirtualization`|
 |`-fforce-enable-int128`||`Enable support for int128_t type`|
 |`-ffp-contract=<value>`||`Form fused FP ops (e.g. FMAs): fast (everywhere) \| on (according to FP_CONTRACT pragma, default) \| off (never fuse)`|
 |`-ffreestanding`||`Assert that the compilation takes place in a freestanding environment`|
 |`-ffunction-sections`||`Place each function in its own section (ELF Only)`|
 |`-fgnu-keywords`||`Allow GNU-extension keywords regardless of language standard`|
-|`-fgnu-runtime`||`Generate output compatible with the standard GNU Objective-C runtime`|
+|`-fgnu-runtime`|Unsupported|`Generate output compatible with the standard GNU Objective-C runtime`|
 |`-fgnu89-inline`||`Use the gnu89 inline semantics`|
 |`-fgpu-rdc`||`Generate relocatable device code, also known as separate compilation mode.`|
 |`-fimplicit-module-maps`||`Implicitly search the file system for module map files.`|
@@ -222,7 +222,7 @@
 |`-fno-lax-vector-conversions`||`Disallow implicit conversions between vectors with a different number of elements or different element types`|
 |`-fno-lto`||`Disable LTO mode (default)`|
 |`-fno-merge-all-constants`||`Disallow merging of constants`|
-|`-fno-objc-infer-related-result-type`||`do not infer Objective-C related result type based on method family`|
+|`-fno-objc-infer-related-result-type`|Unsupported|`do not infer Objective-C related result type based on method family`|
 |`-fno-operator-names`||`Do not treat C++ operator name keywords as synonyms for operators`|
 |`-fno-plt`||`Do not use the PLT to make function calls`|
 |`-fno-preserve-as-comments`||`Do not preserve comments in inline assembly`|
@@ -264,10 +264,10 @@
 |`-fno-use-cxa-atexit`||`Don't use __cxa_atexit for calling destructors`|
 |`-fno-use-init-array`||`Don't use .init_array instead of .ctors`|
 |`-fobjc-arc-exceptions`||`Use EH-safe code when synthesizing retains and releases in -fobjc-arc`|
-|`-fobjc-arc`||`Synthesize retain and release calls for Objective-C pointers`|
-|`-fobjc-exceptions`||`Enable Objective-C exceptions`|
-|`-fobjc-runtime=<value>`||`Specify the target Objective-C runtime kind and version`|
-|`-fobjc-weak`||`Enable ARC-style weak references in Objective-C`|
+|`-fobjc-arc`|Unsupported|`Synthesize retain and release calls for Objective-C pointers`|
+|`-fobjc-exceptions`|Unsupported|`Enable Objective-C exceptions`|
+|`-fobjc-runtime=<value>`|Unsupported|`Specify the target Objective-C runtime kind and version`|
+|`-fobjc-weak`|Unsupported|`Enable ARC-style weak references in Objective-C`|
 |`-fopenmp-simd`||`Emit OpenMP code only for SIMD-based constructs.`|
 |`-fopenmp-targets=<value>`||`Specify comma-separated list of triples OpenMP offloading targets to be supported`|
 |`-fopenmp`||`Parse OpenMP pragmas and generate parallel code.`|
@@ -383,13 +383,13 @@
 |`-gsplit-dwarf=<value>`||`Set DWARF fission mode to either 'split' or 'single'`|
 |`-gz=<value>`||`DWARF debug sections compression type`|
 |`-gz`||`DWARF debug sections compression type`|
-|`-G <size>`||`Put objects of at most <size> bytes into small data section (MIPS / Hexagon)`|
+|`-G <size>`|Unsupported|`Put objects of at most <size> bytes into small data section (MIPS / Hexagon)`|
 |`-g`||`Generate source-level debug information`|
 |`--help-hidden`||`Display help for hidden options`|
 |`-help`||`Display available options`|
-|`--hip-device-lib-path=<value>`||`HIP device library path`|
-|`--hip-device-lib=<value>`||`HIP device library`|
-|`--hip-link`||`Link clang-offload-bundler bundles for HIP`|
+|`--hip-device-lib-path=<value>`|Supported|`HIP device library path`|
+|`--hip-device-lib=<value>`|Supported|`HIP device library`|
+|`--hip-link`|Supported|`Link clang-offload-bundler bundles for HIP`|
 |`-H`||`Show header includes and nesting depth`|
 |`-I-`||`Restrict all prior -I flags to double-quoted inclusion and remove current directory from include path`|
 |`-idirafter <value>`||`Add directory to AFTER include search path`|
@@ -415,21 +415,21 @@
 |`-malign-double`||`Align doubles to two words in structs (x86 only)`|
 |`-mbackchain`||`Link stack frames through backchain on System Z`|
 |`-mbranch-protection=<value>`||`Enforce targets of indirect branches and function returns`|
-|`-mcode-object-v3`||`Enable code object v3 (AMDGPU only)`|
-|`-mcrc`||`Allow use of CRC instructions (ARM/Mips only)`|
+|`-mcode-object-v3`|Supported|`Enable code object v3 (AMDGPU only)`|
+|`-mcrc`|Unsupported|`Allow use of CRC instructions (ARM/Mips only)`|
 |`-MD`||`Write a depfile containing user and system headers`|
 |`-meabi <value>`||`Set EABI type, e.g. 4, 5 or gnu (default depends on triple)`|
-|`-membedded-data`||`Place constants in the .rodata section instead of the .sdata section even if they meet the -G <size> threshold (MIPS)`|
-|`-mexecute-only`||`Disallow generation of data access to code sections (ARM only)`|
-|`-mextern-sdata`||`Assume that externally defined data is in the small data if it meets the -G <size> threshold (MIPS)`|
+|`-membedded-data`|Unsupported|`Place constants in the .rodata section instead of the .sdata section even if they meet the -G <size> threshold (MIPS)`|
+|`-mexecute-only`|Unsupported|`Disallow generation of data access to code sections (ARM only)`|
+|`-mextern-sdata`|Unsupported|`Assume that externally defined data is in the small data if it meets the -G <size> threshold (MIPS)`|
 |`-mfentry`||`Insert calls to fentry at function entry (x86 only)`|
-|`-mfix-cortex-a53-835769`||`Workaround Cortex-A53 erratum 835769 (AArch64 only)`|
-|`-mfp32`||`Use 32-bit floating point registers (MIPS only)`|
-|`-mfp64`||`Use 64-bit floating point registers (MIPS only)`|
+|`-mfix-cortex-a53-835769`|Unsupported|`Workaround Cortex-A53 erratum 835769 (AArch64 only)`|
+|`-mfp32`|Unsupported|`Use 32-bit floating point registers (MIPS only)`|
+|`-mfp64`|Unsupported|`Use 64-bit floating point registers (MIPS only)`|
 |`-MF <file>`||`Write depfile output from -MMD, -MD, -MM, or -M to <file>`|
-|`-mgeneral-regs-only`||`Generate code which only uses the general purpose registers (AArch64 only)`|
+|`-mgeneral-regs-only`|Unsupported|`Generate code which only uses the general purpose registers (AArch64 only)`|
 |`-mglobal-merge`||`Enable merging of globals`|
-|`-mgpopt`||`Use GP relative accesses for symbols known to be in a small data section (MIPS)`|
+|`-mgpopt`|Unsupported|`Use GP relative accesses for symbols known to be in a small data section (MIPS)`|
 |`-MG`||`Add missing headers to depfile`|
 |`-mhvx-length=<value>`||`Set Hexagon Vector Length`|
 |`-mhvx=<value>`||`Enable Hexagon Vector eXtensions`|
@@ -441,55 +441,55 @@
 |`-mios-version-min=<value>`||`Set iOS deployment target`|
 |`-MJ <value>`||`Write a compilation database entry per input`|
 |`-mllvm <value>`||`Additional arguments to forward to LLVM's option processing`|
-|`-mlocal-sdata`||`Extend the -G behaviour to object local data (MIPS)`|
+|`-mlocal-sdata`|Unsupported|`Extend the -G behaviour to object local data (MIPS)`|
 |`-mlong-calls`||`Generate branches with extended addressability, usually via indirect jumps.`|
 |`-mmacosx-version-min=<value>`||`Set Mac OS X deployment target`|
 |`-mmadd4`||`Enable the generation of 4-operand madd.s, madd.d and related instructions.`|
 |`-MMD`||`Write a depfile containing user headers`|
 |`-mmemops`||`Enable generation of memop instructions`|
 |`-mms-bitfields`||`Set the default structure layout to be compatible with the Microsoft compiler standard`|
-|`-mmsa`||`Enable MSA ASE (MIPS only)`|
-|`-mmt`||`Enable MT ASE (MIPS only)`|
+|`-mmsa`|Unsupported|`Enable MSA ASE (MIPS only)`|
+|`-mmt`|Unsupported|`Enable MT ASE (MIPS only)`|
 |`-MM`||`Like -MMD, but also implies -E and writes to stdout by default`|
 |`-mno-abicalls`||`Disable SVR4-style position-independent code (Mips only)`|
-|`-mno-code-object-v3`||`Disable code object v3 (AMDGPU only)`|
+|`-mno-code-object-v3`|Supported|`Disable code object v3 (AMDGPU only)`|
 |`-mno-crc`||`Disallow use of CRC instructions (Mips only)`|
-|`-mno-embedded-data`||`Do not place constants in the .rodata section instead of the .sdata if they meet the -G <size> threshold (MIPS)`|
-|`-mno-execute-only`||`Allow generation of data access to code sections (ARM only)`|
-|`-mno-extern-sdata`||`Do not assume that externally defined data is in the small data if it meets the -G <size> threshold (MIPS)`|
-|`-mno-fix-cortex-a53-835769`||`Don't workaround Cortex-A53 erratum 835769 (AArch64 only)`|
+|`-mno-embedded-data`|Unsupported|`Do not place constants in the .rodata section instead of the .sdata if they meet the -G <size> threshold (MIPS)`|
+|`-mno-execute-only`|Unsupported|`Allow generation of data access to code sections (ARM only)`|
+|`-mno-extern-sdata`|Unsupported|`Do not assume that externally defined data is in the small data if it meets the -G <size> threshold (MIPS)`|
+|`-mno-fix-cortex-a53-835769`|Unsupported|`Don't workaround Cortex-A53 erratum 835769 (AArch64 only)`|
 |`-mno-global-merge`||`Disable merging of globals`|
-|`-mno-gpopt`||`Do not use GP relative accesses for symbols known to be in a small data section (MIPS)`|
+|`-mno-gpopt`|Unsupported|`Do not use GP relative accesses for symbols known to be in a small data section (MIPS)`|
 |`-mno-hvx`||`Disable Hexagon Vector eXtensions`|
 |`-mno-implicit-float`||`Don't generate implicit floating point instructions`|
 |`-mno-incremental-linker-compatible`||`(integrated-as) Emit an object file which cannot be used with an incremental linker`|
-|`-mno-local-sdata`||`Do not extend the -G behaviour to object local data (MIPS)`|
+|`-mno-local-sdata`|Unsupported|`Do not extend the -G behaviour to object local data (MIPS)`|
 |`-mno-long-calls`||`Restore the default behaviour of not generating long calls`|
 |`-mno-madd4`||`Disable the generation of 4-operand madd.s, madd.d and related instructions.`|
 |`-mno-memops`||`Disable generation of memop instructions`|
-|`-mno-movt`||`Disallow use of movt/movw pairs (ARM only)`|
+|`-mno-movt`|Unsupported|`Disallow use of movt/movw pairs (ARM only)`|
 |`-mno-ms-bitfields`||`Do not set the default structure layout to be compatible with the Microsoft compiler standard`|
-|`-mno-msa`||`Disable MSA ASE (MIPS only)`|
-|`-mno-mt`||`Disable MT ASE (MIPS only)`|
+|`-mno-msa`|Unsupported|`Disable MSA ASE (MIPS only)`|
+|`-mno-mt`|Unsupported|`Disable MT ASE (MIPS only)`|
 |`-mno-neg-immediates`||`Disallow converting instructions with negative immediates to their negation or inversion.`|
 |`-mno-nvj`||`Disable generation of new-value jumps`|
 |`-mno-nvs`||`Disable generation of new-value stores`|
-|`-mno-outline`||`Disable function outlining (AArch64 only)`|
+|`-mno-outline`|Unsupported|`Disable function outlining (AArch64 only)`|
 |`-mno-packets`||`Disable generation of instruction packets`|
 |`-mno-relax`||`Disable linker relaxation`|
-|`-mno-restrict-it`||`Allow generation of deprecated IT blocks for ARMv8. It is off by default for ARMv8 Thumb mode`|
-|`-mno-sram-ecc`||`Disable SRAM ECC (AMDGPU only)`|
+|`-mno-restrict-it`|Unsupported|`Allow generation of deprecated IT blocks for ARMv8. It is off by default for ARMv8 Thumb mode`|
+|`-mno-sram-ecc`|Supported|`Disable SRAM ECC (AMDGPU only)`|
 |`-mno-stack-arg-probe`||`Disable stack probes which are enabled by default`|
 |`-mno-tls-direct-seg-refs`||`Disable direct TLS access through segment registers`|
-|`-mno-unaligned-access`||`Force all memory accesses to be aligned (AArch32/AArch64 only)`|
-|`-mno-xnack`||`Disable XNACK (AMDGPU only)`|
-|`-mnocrc`||`Disallow use of CRC instructions (ARM only)`|
+|`-mno-unaligned-access`|Unsupported|`Force all memory accesses to be aligned (AArch32/AArch64 only)`|
+|`-mno-xnack`|Supported|`Disable XNACK (AMDGPU only)`|
+|`-mnocrc`|Unsupported|`Disallow use of CRC instructions (ARM only)`|
 |`-mnvj`||`Enable generation of new-value jumps`|
 |`-mnvs`||`Enable generation of new-value stores`|
 |`-module-dependency-dir <value>`||`Directory to dump module dependencies to`|
 |`-module-file-info`||`Provide information about a particular module file`|
 |`-momit-leaf-frame-pointer`||`Omit frame pointer setup for leaf functions`|
-|`-moutline`||`Enable function outlining (AArch64 only)`|
+|`-moutline`|Unsupported|`Enable function outlining (AArch64 only)`|
 |`-mpackets`||`Enable generation of instruction packets`|
 |`-mpie-copy-relocations`||`Use copy relocations support for PIE builds`|
 |`-mprefer-vector-width=<value>`||`Specifies preferred vector width for auto-vectorization. Defaults to 'none' which allows target specific decisions.`|
@@ -498,22 +498,22 @@
 |`-MQ <value>`||`Specify name of main file output to quote in depfile`|
 |`-mrelax-all`||`(integrated-as) Relax all machine instructions`|
 |`-mrelax`||`Enable linker relaxation`|
-|`-mrestrict-it`||`Disallow generation of deprecated IT blocks for ARMv8. It is on by default for ARMv8 Thumb mode.`|
+|`-mrestrict-it`|Unsupported|`Disallow generation of deprecated IT blocks for ARMv8. It is on by default for ARMv8 Thumb mode.`|
 |`-mrtd`||`Make StdCall calling convention the default`|
 |`-msign-return-address=<value>`||`Select return address signing scope`|
 |`-msoft-float`||`Use software floating point`|
-|`-msram-ecc`||`Enable SRAM ECC (AMDGPU only)`|
+|`-msram-ecc`|Supported|`Enable SRAM ECC (AMDGPU only)`|
 |`-mstack-alignment=<value>`||`Set the stack alignment`|
 |`-mstack-arg-probe`||`Enable stack probes`|
 |`-mstack-probe-size=<value>`||`Set the stack probe size`|
 |`-mstackrealign`||`Force realign the stack at entry to every function`|
 |`-mthread-model <value>`||`The thread model to use, e.g. posix, single (posix by default)`|
 |`-mtls-direct-seg-refs`||`Enable direct TLS access through segment registers (default)`|
-|`-mtp=<value>`||`Thread pointer access method (AArch32/AArch64 only)`|
+|`-mtp=<value>`|Unsupported|`Thread pointer access method (AArch32/AArch64 only)`|
 |`-MT <value>`||`Specify name of main file output in depfile`|
-|`-munaligned-access`||`Allow memory accesses to be unaligned (AArch32/AArch64 only)`|
+|`-munaligned-access`|Unsupported|`Allow memory accesses to be unaligned (AArch32/AArch64 only)`|
 |`-MV`||`Use NMake/Jom format for the depfile`|
-|`-mxnack`||`Enable XNACK (AMDGPU only)`|
+|`-mxnack`|Supported|`Enable XNACK (AMDGPU only)`|
 |`-M`||`Like -MD, but also implies -E and writes to stdout by default`|
 |`--no-cuda-gpu-arch=<value>`||`Remove GPU architecture (e.g. sm_35) from the list of GPUs to compile for. 'all' resets the list to its default value.`|
 |`--no-cuda-include-ptx=<value>`||`Do not include PTX for the following GPU architecture (e.g. sm_35) or 'all'. May be specified more than once.`|
@@ -521,7 +521,7 @@
 |`--no-system-header-prefix=<prefix>`||`Treat all #include paths starting with <prefix> as not including a system header.`|
 |`-nobuiltininc`||`Disable builtin #include directories`|
 |`-nostdinc++`||`Disable standard #include directories for the C++ standard library`|
-|`-ObjC++`||`Treat source input files as Objective-C++ inputs`|
+|`-ObjC++`|Unsupported|`Treat source input files as Objective-C++ inputs`|
 |`-objcmt-atomic-property`||`Make migration to 'atomic' properties`|
 |`-objcmt-migrate-all`||`Enable migration to modern ObjC`|
 |`-objcmt-migrate-annotation`||`Enable migration to property and method annotations`|
@@ -538,14 +538,14 @@
 |`-objcmt-ns-nonatomic-iosonly`||`Enable migration to use NS_NONATOMIC_IOSONLY macro for setting property's 'atomic' attribute`|
 |`-objcmt-returns-innerpointer-property`||`Enable migration to annotate property with NS_RETURNS_INNER_POINTER`|
 |`-objcmt-whitelist-dir-path=<value>`||`Only modify files with a filename contained in the provided directory path`|
-|`-ObjC`||`Treat source input files as Objective-C inputs`|
+|`-ObjC`|Unsupported|`Treat source input files as Objective-C inputs`|
 |`-o <file>`||`Write output to <file>`|
 |`-pg`||`Enable mcount instrumentation`|
 |`-pipe`||`Use pipes between commands, when possible`|
 |`--precompile`||`Only precompile the input`|
 |`-print-effective-triple`||`Print the effective target triple`|
 |`-print-file-name=<file>`||`Print the full library path of <file>`|
-|`-print-ivar-layout`||`Enable Objective-C Ivar layout bitmap print trace`|
+|`-print-ivar-layout`|Unsupported|`Enable Objective-C Ivar layout bitmap print trace`|
 |`-print-libgcc-file-name`||`Print the library path for the currently used compiler runtime library ("libgcc.a" or "libclang_rt.builtins.*.a")`|
 |`-print-prog-name=<name>`||`Print the full program path of <name>`|
 |`-print-resource-dir`||`Print the resource directory pathname`|
@@ -558,8 +558,8 @@
 |`-Qunused-arguments`||`Don't emit warning for unused driver arguments`|
 |`-Qy`||`Emit metadata containing compiler name and version`|
 |`-relocatable-pch`||`Whether to build a relocatable precompiled header`|
-|`-rewrite-legacy-objc`||`Rewrite Legacy Objective-C source to C++`|
-|`-rewrite-objc`||`Rewrite Objective-C source to C++`|
+|`-rewrite-legacy-objc`|Unsupported|`Rewrite Legacy Objective-C source to C++`|
+|`-rewrite-objc`|Unsupported|`Rewrite Objective-C source to C++`|
 |`-Rpass-analysis=<value>`||`Report transformation analysis from optimization passes whose name matches the given POSIX regular expression`|
 |`-Rpass-missed=<value>`||`Report missed transformations by optimization passes whose name matches the given POSIX regular expression`|
 |`-Rpass=<value>`||`Report transformations performed by optimization passes whose name matches the given POSIX regular expression`|
