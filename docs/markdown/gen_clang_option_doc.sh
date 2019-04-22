@@ -12,6 +12,10 @@ echo
 echo "|Option|Support|Description|"
 echo "|-------|------|-------|"
 
+tmpf=tmp_clang_option.txt
+
+[[ -f $tmpf ]] && rm $tmpf
+
 $clang --help | sed '1,5d'|  while read a b; do
   if [[ "$a" != "-"* ]]; then
     desc="$a $b"
@@ -43,6 +47,7 @@ $clang --help | sed '1,5d'|  while read a b; do
   #echo opt=$opt
   #echo desc=$desc
   if [[ "$desc" != "" ]]; then
+    echo $opt |sed 's:\([^ =<]*\).*:\1:' >>$tmpf
     echo '|`'$opt'`|'$supp'|`'$desc'`|'
   fi
 done
