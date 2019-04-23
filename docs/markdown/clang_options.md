@@ -3,14 +3,14 @@
 
 |Option|Support|Description|
 |-------|------|-------|
-|`-###`||`Print (but do not run) the commands to run for this compilation`|
-|`--analyzer-output <value>`||`Static analyzer report output format (html\|plist\|plist-multi-file\|plist-html\|text).`|
+|`-###`|Supported|`Print (but do not run) the commands to run for this compilation`|
+|`--analyzer-output <value>`|Supported|`Static analyzer report output format (html\|plist\|plist-multi-file\|plist-html\|text).`|
 |`--analyze`||`Run the static analyzer`|
-|`-arcmt-migrate-emit-errors`||`Emit ARC errors even if the migrator can fix them`|
-|`-arcmt-migrate-report-output <value>`||`Output path for the plist report`|
-|`-B <dir>`||`Add <dir> to search path for binaries and object files used implicitly`|
-|`-CC`||`Include comments from within macros in preprocessed output`|
-|`-cfguard`||`Emit tables required for Windows Control Flow Guard.`|
+|`-arcmt-migrate-emit-errors`|Unsupported|`Emit ARC errors even if the migrator can fix them`|
+|`-arcmt-migrate-report-output <value>`|Unsupported|`Output path for the plist report`|
+|`-B <dir>`|Supported|`Add <dir> to search path for binaries and object files used implicitly`|
+|`-CC`|Supported|`Include comments from within macros in preprocessed output`|
+|`-cfguard`|Supported|`Emit tables required for Windows Control Flow Guard.`|
 |`-cl-denorms-are-zero`|Supported|`OpenCL only. Allow denormals to be flushed to zero.`|
 |`-cl-fast-relaxed-math`|Supported|`OpenCL only. Sets -cl-finite-math-only and -cl-unsafe-math-optimizations, and defines __FAST_RELAXED_MATH__.`|
 |`-cl-finite-math-only`|Supported|`OpenCL only. Allow floating-point optimizations that assume arguments and results are not NaNs or +-Inf.`|
@@ -24,40 +24,40 @@
 |`-cl-strict-aliasing`|Supported|`OpenCL only. This option is added for compatibility with OpenCL 1.0.`|
 |`-cl-uniform-work-group-size`|Supported|`OpenCL only. Defines that the global work-size be a multiple of the work-group size specified to clEnqueueNDRangeKernel`|
 |`-cl-unsafe-math-optimizations`|Supported|`OpenCL only. Allow unsafe floating-point optimizations. Also implies -cl-no-signed-zeros and -cl-mad-enable.`|
-|`--config <value>`||`Specifies configuration file`|
-|`--cuda-compile-host-device`||`Compile CUDA code for both host and device (default). Has no effect on non-CUDA compilations.`|
-|`--cuda-device-only`||`Compile CUDA code for device only`|
-|`--cuda-gpu-arch=<value>`||`CUDA GPU architecture (e.g. sm_35). May be specified more than once.`|
-|`--cuda-host-only`||`Compile CUDA code for host only. Has no effect on non-CUDA compilations.`|
-|`--cuda-include-ptx=<value>`||`Include PTX for the following GPU architecture (e.g. sm_35) or 'all'. May be specified more than once.`|
-|`--cuda-noopt-device-debug`||`Enable device-side debug info generation. Disables ptxas optimizations.`|
-|`--cuda-path-ignore-env`||`Ignore environment variables to detect CUDA installation`|
-|`--cuda-path=<value>`||`CUDA installation path`|
-|`-cxx-isystem <directory>`||`Add directory to the C++ SYSTEM include search path`|
-|`-C`||`Include comments in preprocessed output`|
-|`-c`||`Only run preprocess, compile, and assemble steps`|
-|`-dD`||`Print macro definitions in -E mode in addition to normal output`|
-|`-dependency-dot <value>`||`Filename to write DOT-formatted header dependencies to`|
-|`-dependency-file <value>`||`Filename (or -) to write dependency output to`|
-|`-dI`||`Print include directives in -E mode in addition to normal output`|
-|`-dM`||`Print macro definitions in -E mode instead of normal output`|
-|`-D <macro>`||`=<value> Define <macro> to <value> (or 1 if <value> omitted)`|
-|`-emit-ast`||`Emit Clang AST files for source inputs`|
-|`-emit-llvm`||`Use the LLVM representation for assembler and object files`|
-|`-enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang<value>`||`Trivial automatic variable initialization to zero is only here for benchmarks, it'll eventually be removed, and I'm OK with that because I'm only using it to benchmark`|
+|`--config <value>`|Supported|`Specifies configuration file`|
+|`--cuda-compile-host-device`|Supported|`Compile CUDA code for both host and device (default). Has no effect on non-CUDA compilations.`|
+|`--cuda-device-only`|Supported|`Compile CUDA code for device only`|
+|`--cuda-gpu-arch=<value>`|Supported|`CUDA GPU architecture (e.g. sm_35). May be specified more than once.`|
+|`--cuda-host-only`|Supported|`Compile CUDA code for host only. Has no effect on non-CUDA compilations.`|
+|`--cuda-include-ptx=<value>`|Unsupported|`Include PTX for the following GPU architecture (e.g. sm_35) or 'all'. May be specified more than once.`|
+|`--cuda-noopt-device-debug`|Unsupported|`Enable device-side debug info generation. Disables ptxas optimizations.`|
+|`--cuda-path-ignore-env`|Unsupported|`Ignore environment variables to detect CUDA installation`|
+|`--cuda-path=<value>`|Unsupported|`CUDA installation path`|
+|`-cxx-isystem <directory>`|Supported|`Add directory to the C++ SYSTEM include search path`|
+|`-C`|Supported|`Include comments in preprocessed output`|
+|`-c`|Supported|`Only run preprocess, compile, and assemble steps`|
+|`-dD`|Supported|`Print macro definitions in -E mode in addition to normal output`|
+|`-dependency-dot <value>`|Supported|`Filename to write DOT-formatted header dependencies to`|
+|`-dependency-file <value>`|Supported|`Filename (or -) to write dependency output to`|
+|`-dI`|Supported|`Print include directives in -E mode in addition to normal output`|
+|`-dM`|Supported|`Print macro definitions in -E mode instead of normal output`|
+|`-D <macro>`|Supported|`=<value> Define <macro> to <value> (or 1 if <value> omitted)`|
+|`-emit-ast`|Supported|`Emit Clang AST files for source inputs`|
+|`-emit-llvm`|Supported|`Use the LLVM representation for assembler and object files`|
+|`-enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang<value>`|Supported|`Trivial automatic variable initialization to zero is only here for benchmarks, it'll eventually be removed, and I'm OK with that because I'm only using it to benchmark`|
 |`-E`||`Only run the preprocessor`|
 |`-faddrsig`||`Emit an address-significance table`|
-|`-faligned-allocation`||`Enable C++17 aligned allocation functions`|
-|`-fallow-editor-placeholders`||`Treat editor placeholders as valid source code`|
-|`-fansi-escape-codes`||`Use ANSI escape codes for diagnostics`|
-|`-fapple-kext`||`Use Apple's kernel extensions ABI`|
-|`-fapple-pragma-pack`||`Enable Apple gcc-compatible #pragma pack handling`|
-|`-fapplication-extension`||`Restrict code to those available for App Extensions`|
-|`-fblocks`||`Enable the 'blocks' language feature`|
-|`-fborland-extensions`||`Accept non-standard constructs supported by the Borland compiler`|
-|`-fbuild-session-file=<file>`||`Use the last modification time of <file> as the build session timestamp`|
-|`-fbuild-session-timestamp=<time since Epoch in seconds>`||`Time when the current build session started`|
-|`-fbuiltin-module-map`||`Load the clang builtins module map file.`|
+|`-faligned-allocation`|Unsupported|`Enable C++17 aligned allocation functions`|
+|`-fallow-editor-placeholders`|Supported|`Treat editor placeholders as valid source code`|
+|`-fansi-escape-codes`|Supported|`Use ANSI escape codes for diagnostics`|
+|`-fapple-kext`|Unsupported|`Use Apple's kernel extensions ABI`|
+|`-fapple-pragma-pack`|Unsupported|`Enable Apple gcc-compatible #pragma pack handling`|
+|`-fapplication-extension`|Unsupported|`Restrict code to those available for App Extensions`|
+|`-fblocks`|Supported|`Enable the 'blocks' language feature`|
+|`-fborland-extensions`|Unsupported|`Accept non-standard constructs supported by the Borland compiler`|
+|`-fbuild-session-file=<file>`|Supported|`Use the last modification time of <file> as the build session timestamp`|
+|`-fbuild-session-timestamp=<time since Epoch in seconds>`|Supported|`Time when the current build session started`|
+|`-fbuiltin-module-map`|Unsupported|`Load the clang builtins module map file.`|
 |`-fc++-static-destructors`||`Enable C++ static destructor registration (the default)`|
 |`-fcall-saved-x10`|Unsupported|`Make the x10 register call-saved (AArch64 only)`|
 |`-fcall-saved-x11`|Unsupported|`Make the x11 register call-saved (AArch64 only)`|
@@ -70,32 +70,32 @@
 |`-fcall-saved-x9`|Unsupported|`Make the x9 register call-saved (AArch64 only)`|
 |`-fcf-protection=<value>`||`Instrument control-flow architecture protection. Options: return, branch, full, none.`|
 |`-fcf-protection`||`Enable cf-protection in 'full' mode`|
-|`-fchar8_t`||`Enable C++ builtin type char8_t`|
-|`-fclang-abi-compat=<version>`||`Attempt to match the ABI of Clang <version>`|
-|`-fcolor-diagnostics`||`Use colors in diagnostics`|
-|`-fcomment-block-commands=<arg>`||`Treat each comma separated argument in <arg> as a documentation comment block command`|
-|`-fcomplete-member-pointers`||`Require member pointer base types to be complete if they would be significant under the Microsoft ABI`|
+|`-fchar8_t`|Supported|`Enable C++ builtin type char8_t`|
+|`-fclang-abi-compat=<version>`|Supported|`Attempt to match the ABI of Clang <version>`|
+|`-fcolor-diagnostics`|Supported|`Use colors in diagnostics`|
+|`-fcomment-block-commands=<arg>`|Supported|`Treat each comma separated argument in <arg> as a documentation comment block command`|
+|`-fcomplete-member-pointers`|Supported|`Require member pointer base types to be complete if they would be significant under the Microsoft ABI`|
 |`-fcoroutines-ts`||`Enable support for the C++ Coroutines TS`|
 |`-fcoverage-mapping`||`Generate coverage mapping to enable code coverage analysis`|
 |`-fcs-profile-generate=<directory>`||`Generate instrumented code to collect context sensitive execution counts into <directory>/default.profraw (overridden by LLVM_PROFILE_FILE env var)`|
 |`-fcs-profile-generate`||`Generate instrumented code to collect context sensitive execution counts into default.profraw (overridden by LLVM_PROFILE_FILE env var)`|
-|`-fcuda-approx-transcendentals`||`Use approximate transcendental functions`|
-|`-fcuda-flush-denormals-to-zero`||`Flush denormal floating point values to zero in CUDA device mode.`|
-|`-fcuda-short-ptr`||`Use 32-bit pointers for accessing const/local/shared address spaces.`|
+|`-fcuda-approx-transcendentals`|Unsupported|`Use approximate transcendental functions`|
+|`-fcuda-flush-denormals-to-zero`|Supported|`Flush denormal floating point values to zero in CUDA device mode.`|
+|`-fcuda-short-ptr`|Unsupported|`Use 32-bit pointers for accessing const/local/shared address spaces.`|
 |`-fcxx-exceptions`||`Enable C++ exceptions`|
-|`-fdata-sections`||`Place each data in its own section (ELF Only)`|
+|`-fdata-sections`|Supported|`Place each data in its own section (ELF Only)`|
 |`-fdebug-info-for-profiling`||`Emit extra debug info to make sample profile more accurate.`|
 |`-fdebug-macro`||`Emit macro debug information`|
 |`-fdebug-prefix-map=<value>`||`remap file source paths in debug info`|
 |`-fdebug-ranges-base-address`||`Use DWARF base address selection entries in debug_ranges`|
 |`-fdebug-types-section`||`Place debug types in their own section (ELF Only)`|
-|`-fdeclspec`||`Allow __declspec as a keyword`|
-|`-fdelayed-template-parsing`||`Parse templated function definitions at the end of the translation unit`|
-|`-fdelete-null-pointer-checks`||`Treat usage of null pointers as undefined behavior.`|
-|`-fdiagnostics-absolute-paths`||`Print absolute paths in diagnostics`|
+|`-fdeclspec`|Supported|`Allow __declspec as a keyword`|
+|`-fdelayed-template-parsing`|Supported|`Parse templated function definitions at the end of the translation unit`|
+|`-fdelete-null-pointer-checks`|Supported|`Treat usage of null pointers as undefined behavior.`|
+|`-fdiagnostics-absolute-paths`|Supported|`Print absolute paths in diagnostics`|
 |`-fdiagnostics-hotness-threshold=<number>`||`Prevent optimization remarks from being output if they do not have at least this profile count`|
 |`-fdiagnostics-parseable-fixits`||`Print fix-its in machine parseable form`|
-|`-fdiagnostics-print-source-range-info`||`Print source range spans in numeric form`|
+|`-fdiagnostics-print-source-range-info`|Supported|`Print source range spans in numeric form`|
 |`-fdiagnostics-show-hotness`||`Enable profile hotness information in diagnostic line`|
 |`-fdiagnostics-show-note-include-stack`||`Display include stacks for diagnostic notes`|
 |`-fdiagnostics-show-option`||`Print option name with mappable diagnostics`|
