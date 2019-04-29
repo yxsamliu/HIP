@@ -6,19 +6,19 @@
 -B s
 -CC s
 -cfguard s
--cl-denorms-are-zero
--cl-fast-relaxed-math
--cl-finite-math-only
--cl-fp32-correctly-rounded-divide-sqrt
--cl-kernel-arg-info
--cl-mad-enable
--cl-no-signed-zeros
--cl-opt-disable
--cl-single-precision-constant
--cl-std
--cl-strict-aliasing
--cl-uniform-work-group-size
--cl-unsafe-math-optimizations
+-cl-denorms-are-zero s
+-cl-fast-relaxed-math s
+-cl-finite-math-only s
+-cl-fp32-correctly-rounded-divide-sqrt s
+-cl-kernel-arg-info s
+-cl-mad-enable s
+-cl-no-signed-zeros s
+-cl-opt-disable s
+-cl-single-precision-constant s
+-cl-std s
+-cl-strict-aliasing s
+-cl-uniform-work-group-size s
+-cl-unsafe-math-optimizations s
 --config s
 --cuda-compile-host-device s
 --cuda-device-only s
@@ -40,8 +40,8 @@
 -emit-ast s
 -emit-llvm s
 -enable-trivial-auto-var-init-zero-knowing-it-will-be-removed-from-clang s
-
--faddrsig
+-E s
+-faddrsig s
 -faligned-allocation n
 -fallow-editor-placeholders s
 -fansi-escape-codes s
