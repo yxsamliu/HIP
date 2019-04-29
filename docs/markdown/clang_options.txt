@@ -1,6 +1,6 @@
 -### s
 --analyzer-output s
---analyze
+--analyze n
 -arcmt-migrate-emit-errors n
 -arcmt-migrate-report-output n
 -B s
@@ -53,554 +53,554 @@
 -fbuild-session-file s
 -fbuild-session-timestamp s
 -fbuiltin-module-map n
--fc++-static-destructors
--fcall-saved-x10
--fcall-saved-x11
--fcall-saved-x12
--fcall-saved-x13
--fcall-saved-x14
--fcall-saved-x15
--fcall-saved-x18
--fcall-saved-x8
--fcall-saved-x9
--fcf-protection
--fcf-protection
+-fc++-static-destructors s
+-fcall-saved-x10 s
+-fcall-saved-x11 s
+-fcall-saved-x12 s
+-fcall-saved-x13 s
+-fcall-saved-x14 s
+-fcall-saved-x15 s
+-fcall-saved-x18 s
+-fcall-saved-x8 s
+-fcall-saved-x9 s
+-fcf-protection n
+-fcf-protection n
 -fchar8_t s
 -fclang-abi-compat s
 -fcolor-diagnostics s
 -fcomment-block-commands s
 -fcomplete-member-pointers s
--fcoroutines-ts
--fcoverage-mapping
--fcs-profile-generate
--fcs-profile-generate
+-fcoroutines-ts s
+-fcoverage-mapping n
+-fcs-profile-generate n
+-fcs-profile-generate n
 -fcuda-approx-transcendentals n
 -fcuda-flush-denormals-to-zero s
 -fcuda-short-ptr n
--fcxx-exceptions
+-fcxx-exceptions s
 -fdata-sections s
--fdebug-info-for-profiling
--fdebug-macro
--fdebug-prefix-map
--fdebug-ranges-base-address
--fdebug-types-section
+-fdebug-info-for-profiling s
+-fdebug-macro s
+-fdebug-prefix-map n
+-fdebug-ranges-base-address s
+-fdebug-types-section s
 -fdeclspec s
 -fdelayed-template-parsing s
 -fdelete-null-pointer-checks s
 -fdiagnostics-absolute-paths s
--fdiagnostics-hotness-threshold
--fdiagnostics-parseable-fixits
+-fdiagnostics-hotness-threshold n
+-fdiagnostics-parseable-fixits s
 -fdiagnostics-print-source-range-info s
--fdiagnostics-show-hotness
--fdiagnostics-show-note-include-stack
--fdiagnostics-show-option
--fdiagnostics-show-template-tree
--fdigraphs
--fdiscard-value-names
--fdollars-in-identifiers
--fdouble-square-bracket-attributes
--fdwarf-exceptions
--fembed-bitcode-marker
--fembed-bitcode
--fembed-bitcode
--femit-all-decls
--femulated-tls
--fexceptions
--fexperimental-isel
--fexperimental-new-pass-manager
--ffast-math
--ffine-grained-bitfield-accesses
--ffixed-point
--ffixed-r19
--ffixed-r9
--ffixed-x10
--ffixed-x11
--ffixed-x12
--ffixed-x13
--ffixed-x14
--ffixed-x15
--ffixed-x18
--ffixed-x1
--ffixed-x20
--ffixed-x21
--ffixed-x22
--ffixed-x23
--ffixed-x24
--ffixed-x25
--ffixed-x26
--ffixed-x27
--ffixed-x28
--ffixed-x2
--ffixed-x3
--ffixed-x4
--ffixed-x5
--ffixed-x6
--ffixed-x7
--ffixed-x9
--fforce-emit-vtables
--fforce-enable-int128
--ffp-contract
--ffreestanding
--ffunction-sections
--fgnu-keywords
--fgnu-runtime
--fgnu89-inline
--fgpu-rdc
--fimplicit-module-maps
--finline-functions
--finline-hint-functions
--finstrument-function-entry-bare
--finstrument-functions-after-inlining
--finstrument-functions
--fintegrated-as
--fkeep-static-consts
--flto-jobs
--flto
--flto
--fmath-errno
--fmax-type-align
--fmerge-all-constants
--fmodule-file
--fmodule-map-file
--fmodule-name
--fmodules-cache-path
--fmodules-decluse
--fmodules-disable-diagnostic-validation
--fmodules-ignore-macro
--fmodules-prune-after
--fmodules-prune-interval
--fmodules-search-all
--fmodules-strict-decluse
--fmodules-ts
--fmodules-user-build-path
--fmodules-validate-once-per-build-session
--fmodules-validate-system-headers
--fmodules
--fms-compatibility-version
--fms-compatibility
--fms-extensions
--fmsc-version
--fnew-alignment
--fno-access-control
--fno-addrsig
--fno-assume-sane-operator-new
--fno-autolink
--fno-builtin-
--fno-builtin
--fno-c++-static-destructors
--fno-char8_t
--fno-common
--fno-complete-member-pointers
--fno-constant-cfstrings
--fno-coverage-mapping
--fno-crash-diagnostics
--fno-debug-info-for-profiling
--fno-debug-macro
--fno-declspec
--fno-delayed-template-parsing
--fno-delete-null-pointer-checks
--fno-diagnostics-fixit-info
--fno-digraphs
--fno-discard-value-names
--fno-dollars-in-identifiers
--fno-double-square-bracket-attributes
--fno-elide-constructors
--fno-elide-type
--fno-experimental-isel
--fno-experimental-new-pass-manager
--fno-fine-grained-bitfield-accesses
--fno-fixed-point
--fno-force-enable-int128
--fno-gnu-inline-asm
--fno-integrated-as
--fno-jump-tables
--fno-lax-vector-conversions
--fno-lto
--fno-merge-all-constants
--fno-objc-infer-related-result-type
--fno-operator-names
--fno-plt
--fno-preserve-as-comments
--fno-profile-generate
--fno-profile-instr-generate
--fno-profile-instr-use
--fno-register-global-dtors-with-atexit
--fno-reroll-loops
--fno-rtlib-add-rpath
--fno-rtti-data
--fno-rtti
--fno-sanitize-address-poison-custom-array-cookie
--fno-sanitize-address-use-after-scope
--fno-sanitize-address-use-odr-indicator
--fno-sanitize-blacklist
--fno-sanitize-cfi-cross-dso
--fno-sanitize-coverage
--fno-sanitize-memory-track-origins
--fno-sanitize-memory-use-after-dtor
--fno-sanitize-recover
--fno-sanitize-stats
--fno-sanitize-thread-atomics
--fno-sanitize-thread-func-entry-exit
--fno-sanitize-thread-memory-access
--fno-sanitize-trap
--fno-short-wchar
--fno-show-column
--fno-show-source-location
--fno-signed-char
--fno-signed-zeros
--fno-spell-checking
--fno-stack-protector
--fno-stack-size-section
--fno-standalone-debug
--fno-strict-float-cast-overflow
--fno-threadsafe-statics
--fno-trigraphs
--fno-unroll-loops
--fno-use-cxa-atexit
--fno-use-init-array
--fobjc-arc-exceptions
--fobjc-arc
--fobjc-exceptions
--fobjc-runtime
--fobjc-weak
--fopenmp-simd
--fopenmp-targets
--fopenmp
--foptimization-record-file
--foptimization-record-passes
--forder-file-instrumentation
--fpack-struct
--fpascal-strings
--fpass-plugin
--fpcc-struct-return
--fplt
--fplugin
--fprebuilt-module-path
--fprofile-exclude-files
--fprofile-filter-files
--fprofile-generate
--fprofile-generate
--fprofile-instr-generate
--fprofile-instr-generate
--fprofile-instr-use
--fprofile-remapping-file
--fprofile-sample-accurate
--fprofile-sample-use
--fprofile-use
--freciprocal-math
--freg-struct-return
--fregister-global-dtors-with-atexit
--frelaxed-template-template-args
--freroll-loops
--frtlib-add-rpath
--fsanitize-address-field-padding
--fsanitize-address-globals-dead-stripping
--fsanitize-address-poison-custom-array-cookie
--fsanitize-address-use-after-scope
--fsanitize-address-use-odr-indicator
--fsanitize-blacklist
--fsanitize-cfi-cross-dso
--fsanitize-cfi-icall-generalize-pointers
--fsanitize-coverage
--fsanitize-hwaddress-abi
--fsanitize-memory-track-origins
--fsanitize-memory-track-origins
--fsanitize-memory-use-after-dtor
--fsanitize-recover
--fsanitize-stats
--fsanitize-thread-atomics
--fsanitize-thread-func-entry-exit
--fsanitize-thread-memory-access
--fsanitize-trap
--fsanitize-undefined-strip-path-components
--fsanitize
--fsave-optimization-record
--fseh-exceptions
--fshort-enums
--fshort-wchar
--fshow-overloads
--fsized-deallocation
--fsjlj-exceptions
--fslp-vectorize
--fsplit-dwarf-inlining
--fsplit-lto-unit
--fstack-protector-all
--fstack-protector-strong
--fstack-protector
--fstack-size-section
--fstandalone-debug
--fstrict-enums
--fstrict-float-cast-overflow
--fstrict-return
--fstrict-vtable-pointers
--fthinlto-index
--ftrap-function
--ftrapv-handler
--ftrapv
--ftrigraphs
--ftrivial-auto-var-init
--funique-section-names
--funroll-loops
--fuse-init-array
--fveclib
--fvectorize
--fvisibility-global-new-delete-hidden
--fvisibility-inlines-hidden
--fvisibility-ms-compat
--fvisibility
--fwhole-program-vtables
--fwrapv
--fwritable-strings
--fxray-always-emit-customevents
--fxray-always-emit-typedevents
--fxray-always-instrument
--fxray-attr-list
--fxray-instruction-threshold
--fxray-instrumentation-bundle
--fxray-instrument
--fxray-link-deps
--fxray-modes
--fxray-never-instrument
--fzvector
--F
---gcc-toolchain
--gcodeview-ghash
--gcodeview
--gdwarf-2
--gdwarf-3
--gdwarf-4
--gdwarf-5
--gembed-source
--gline-directives-only
--gline-tables-only
--gmodules
--gno-embed-source
--gsplit-dwarf
--gz
--gz
--G
--g
---help-hidden
--help
---hip-device-lib-path
---hip-device-lib
---hip-link
--H
--I-
--idirafter
--iframeworkwithsysroot
--iframework
--imacros
--include-pch
--include
--index-header-map
--iprefix
--iquote
--isysroot
--isystem-after
--isystem
--ivfsoverlay
--iwithprefixbefore
--iwithprefix
--iwithsysroot
--I
---libomptarget-nvptx-path
--L
--mabicalls
--malign-double
--mbackchain
--mbranch-protection
--mcode-object-v3
--mcrc
--MD
--meabi
--membedded-data
--mexecute-only
--mextern-sdata
--mfentry
--mfix-cortex-a53-835769
--mfp32
--mfp64
--MF
--mgeneral-regs-only
--mglobal-merge
--mgpopt
--MG
--mhvx-length
--mhvx
--mhvx
--miamcu
---migrate
--mincremental-linker-compatible
--mindirect-jump
--mios-version-min
--MJ
--mllvm
--mlocal-sdata
--mlong-calls
--mmacosx-version-min
--mmadd4
--MMD
--mmemops
--mms-bitfields
--mmsa
--mmt
--MM
--mno-abicalls
--mno-code-object-v3
--mno-crc
--mno-embedded-data
--mno-execute-only
--mno-extern-sdata
--mno-fix-cortex-a53-835769
--mno-global-merge
--mno-gpopt
--mno-hvx
--mno-implicit-float
--mno-incremental-linker-compatible
--mno-local-sdata
--mno-long-calls
--mno-madd4
--mno-memops
--mno-movt
--mno-ms-bitfields
--mno-msa
--mno-mt
--mno-neg-immediates
--mno-nvj
--mno-nvs
--mno-outline
--mno-packets
--mno-relax
--mno-restrict-it
--mno-sram-ecc
--mno-stack-arg-probe
--mno-tls-direct-seg-refs
--mno-unaligned-access
--mno-xnack
--mnocrc
--mnvj
--mnvs
--module-dependency-dir
--module-file-info
--momit-leaf-frame-pointer
--moutline
--mpackets
--mpie-copy-relocations
--mprefer-vector-width
--MP
--mqdsp6-compat
--MQ
--mrelax-all
--mrelax
--mrestrict-it
--mrtd
--msign-return-address
--msoft-float
--msram-ecc
--mstack-alignment
--mstack-arg-probe
--mstack-probe-size
--mstackrealign
--mthread-model
--mtls-direct-seg-refs
--mtp
--MT
--munaligned-access
--MV
--mxnack
--M
---no-cuda-gpu-arch
---no-cuda-include-ptx
---no-cuda-version-check
---no-system-header-prefix
--nobuiltininc
--nostdinc++
--ObjC++
--objcmt-atomic-property
--objcmt-migrate-all
--objcmt-migrate-annotation
--objcmt-migrate-designated-init
--objcmt-migrate-instancetype
--objcmt-migrate-literals
--objcmt-migrate-ns-macros
--objcmt-migrate-property-dot-syntax
--objcmt-migrate-property
--objcmt-migrate-protocol-conformance
--objcmt-migrate-readonly-property
--objcmt-migrate-readwrite-property
--objcmt-migrate-subscripting
--objcmt-ns-nonatomic-iosonly
--objcmt-returns-innerpointer-property
--objcmt-whitelist-dir-path
--ObjC
--o
--pg
--pipe
---precompile
--print-effective-triple
--print-file-name
--print-ivar-layout
--print-libgcc-file-name
--print-prog-name
--print-resource-dir
--print-search-dirs
--print-target-triple
--pthread
---ptxas-path
--P
--Qn
--Qunused-arguments
--Qy
--relocatable-pch
--rewrite-legacy-objc
--rewrite-objc
--Rpass-analysis
--Rpass-missed
--Rpass
--rtlib
--R
--save-stats
--save-stats
--save-temps
--save-temps
--serialize-diagnostics
--shared-libsan
--static-libsan
--std
--stdlib
---system-header-prefix
--S
---target
--Tbss
--Tdata
--time
--traditional-cpp
--trigraphs
--Ttext
--T
--undef
--unwindlib
--U
---verify-debug-info
--verify-pch
---version
--v
--Wa,
--Wdeprecated
--Wl,
--working-directory
--Wp,
--W
--w
--Xanalyzer
--Xassembler
--Xclang
--Xcuda-fatbinary
--Xcuda-ptxas
--Xlinker
--Xopenmp-target
--Xopenmp-target
--Xpreprocessor
--x
--z
+-fdiagnostics-show-hotness s
+-fdiagnostics-show-note-include-stack s
+-fdiagnostics-show-option s
+-fdiagnostics-show-template-tree s
+-fdigraphs s
+-fdiscard-value-names s
+-fdollars-in-identifiers s
+-fdouble-square-bracket-attributes s
+-fdwarf-exceptions s
+-fembed-bitcode-marker s
+-fembed-bitcode s
+-fembed-bitcode s
+-femit-all-decls s
+-femulated-tls s
+-fexceptions s
+-fexperimental-isel s
+-fexperimental-new-pass-manager s
+-ffast-math s
+-ffine-grained-bitfield-accesses s
+-ffixed-point s
+-ffixed-r19 s
+-ffixed-r9 s
+-ffixed-x10 s
+-ffixed-x11 s
+-ffixed-x12 s
+-ffixed-x13 s
+-ffixed-x14 s
+-ffixed-x15 s
+-ffixed-x18 s
+-ffixed-x1 s
+-ffixed-x20 s
+-ffixed-x21 s
+-ffixed-x22 s
+-ffixed-x23 s
+-ffixed-x24 s
+-ffixed-x25 s
+-ffixed-x26 s
+-ffixed-x27 s
+-ffixed-x28 s
+-ffixed-x2 s
+-ffixed-x3 s
+-ffixed-x4 s
+-ffixed-x5 s
+-ffixed-x6 s
+-ffixed-x7 s
+-ffixed-x9 s
+-fforce-emit-vtables s
+-fforce-enable-int128 s
+-ffp-contract n
+-ffreestanding n
+-ffunction-sections s
+-fgnu-keywords s
+-fgnu-runtime s
+-fgnu89-inline n
+-fgpu-rdc n
+-fimplicit-module-maps s
+-finline-functions s
+-finline-hint-functions s
+-finstrument-function-entry-bare n
+-finstrument-functions-after-inlining n
+-finstrument-functions n
+-fintegrated-as s
+-fkeep-static-consts s
+-flto-jobs n
+-flto n
+-flto n
+-fmath-errno s
+-fmax-type-align n
+-fmerge-all-constants s
+-fmodule-file n
+-fmodule-map-file n
+-fmodule-name n
+-fmodules-cache-path n
+-fmodules-decluse s
+-fmodules-disable-diagnostic-validation s
+-fmodules-ignore-macro n
+-fmodules-prune-after n
+-fmodules-prune-interval n
+-fmodules-search-all s
+-fmodules-strict-decluse s
+-fmodules-ts n
+-fmodules-user-build-path n
+-fmodules-validate-once-per-build-session n
+-fmodules-validate-system-headers s
+-fmodules s
+-fms-compatibility-version n
+-fms-compatibility n
+-fms-extensions s
+-fmsc-version n
+-fnew-alignment n
+-fno-access-control s
+-fno-addrsig s
+-fno-assume-sane-operator-new s
+-fno-autolink s
+-fno-builtin- s
+-fno-builtin s
+-fno-c++-static-destructors s
+-fno-char8_t s
+-fno-common s
+-fno-complete-member-pointers s
+-fno-constant-cfstrings s
+-fno-coverage-mapping s
+-fno-crash-diagnostics s
+-fno-debug-info-for-profiling s
+-fno-debug-macro s
+-fno-declspec n
+-fno-delayed-template-parsing s
+-fno-delete-null-pointer-checks s
+-fno-diagnostics-fixit-info s
+-fno-digraphs s
+-fno-discard-value-names s
+-fno-dollars-in-identifiers s
+-fno-double-square-bracket-attributes n
+-fno-elide-constructors s
+-fno-elide-type s
+-fno-experimental-isel s
+-fno-experimental-new-pass-manager s
+-fno-fine-grained-bitfield-accesses s
+-fno-fixed-point s
+-fno-force-enable-int128 s
+-fno-gnu-inline-asm s
+-fno-integrated-as s
+-fno-jump-tables s
+-fno-lax-vector-conversions s
+-fno-lto s
+-fno-merge-all-constants s
+-fno-objc-infer-related-result-type s
+-fno-operator-names s
+-fno-plt s
+-fno-preserve-as-comments s
+-fno-profile-generate s
+-fno-profile-instr-generate s
+-fno-profile-instr-use s
+-fno-register-global-dtors-with-atexit s
+-fno-reroll-loops s
+-fno-rtlib-add-rpath s
+-fno-rtti-data s
+-fno-rtti s
+-fno-sanitize-address-poison-custom-array-cookie s
+-fno-sanitize-address-use-after-scope s
+-fno-sanitize-address-use-odr-indicator s
+-fno-sanitize-blacklist s
+-fno-sanitize-cfi-cross-dso s
+-fno-sanitize-coverage n
+-fno-sanitize-memory-track-origins s
+-fno-sanitize-memory-use-after-dtor s
+-fno-sanitize-recover s
+-fno-sanitize-stats s
+-fno-sanitize-thread-atomics s
+-fno-sanitize-thread-func-entry-exit s
+-fno-sanitize-thread-memory-access s
+-fno-sanitize-trap n
+-fno-short-wchar s
+-fno-show-column s
+-fno-show-source-location s
+-fno-signed-char s
+-fno-signed-zeros s
+-fno-spell-checking s
+-fno-stack-protector s
+-fno-stack-size-section s
+-fno-standalone-debug s
+-fno-strict-float-cast-overflow s
+-fno-threadsafe-statics s
+-fno-trigraphs s
+-fno-unroll-loops s
+-fno-use-cxa-atexit s
+-fno-use-init-array s
+-fobjc-arc-exceptions s
+-fobjc-arc s
+-fobjc-exceptions s
+-fobjc-runtime n
+-fobjc-weak s
+-fopenmp-simd s
+-fopenmp-targets n
+-fopenmp s
+-foptimization-record-file n
+-foptimization-record-passes n
+-forder-file-instrumentation s
+-fpack-struct n
+-fpascal-strings s
+-fpass-plugin n
+-fpcc-struct-return n
+-fplt s
+-fplugin n
+-fprebuilt-module-path n
+-fprofile-exclude-files n
+-fprofile-filter-files n
+-fprofile-generate n
+-fprofile-generate n
+-fprofile-instr-generate n
+-fprofile-instr-generate n
+-fprofile-instr-use n
+-fprofile-remapping-file n
+-fprofile-sample-accurate s
+-fprofile-sample-use s
+-fprofile-use n
+-freciprocal-math s
+-freg-struct-return n
+-fregister-global-dtors-with-atexit s
+-frelaxed-template-template-args s
+-freroll-loops s
+-frtlib-add-rpath s
+-fsanitize-address-field-padding n
+-fsanitize-address-globals-dead-stripping s
+-fsanitize-address-poison-custom-array-cookie s
+-fsanitize-address-use-after-scope s
+-fsanitize-address-use-odr-indicator s
+-fsanitize-blacklist n
+-fsanitize-cfi-cross-dso s
+-fsanitize-cfi-icall-generalize-pointers s
+-fsanitize-coverage n
+-fsanitize-hwaddress-abi n
+-fsanitize-memory-track-origins s
+-fsanitize-memory-track-origins s
+-fsanitize-memory-use-after-dtor s
+-fsanitize-recover s
+-fsanitize-stats s
+-fsanitize-thread-atomics s
+-fsanitize-thread-func-entry-exit s
+-fsanitize-thread-memory-access s
+-fsanitize-trap n
+-fsanitize-undefined-strip-path-components n
+-fsanitize n
+-fsave-optimization-record s
+-fseh-exceptions s
+-fshort-enums s
+-fshort-wchar n
+-fshow-overloads n
+-fsized-deallocation s
+-fsjlj-exceptions s
+-fslp-vectorize s
+-fsplit-dwarf-inlining s
+-fsplit-lto-unit s
+-fstack-protector-all n
+-fstack-protector-strong s
+-fstack-protector s
+-fstack-size-section s
+-fstandalone-debug s
+-fstrict-enums s
+-fstrict-float-cast-overflow s
+-fstrict-return s
+-fstrict-vtable-pointers s
+-fthinlto-index n
+-ftrap-function n
+-ftrapv-handler n
+-ftrapv n
+-ftrigraphs s
+-ftrivial-auto-var-init n
+-funique-section-names s
+-funroll-loops s
+-fuse-init-array s
+-fveclib n
+-fvectorize s
+-fvisibility-global-new-delete-hidden s
+-fvisibility-inlines-hidden s
+-fvisibility-ms-compat s
+-fvisibility n
+-fwhole-program-vtables n
+-fwrapv s
+-fwritable-strings s
+-fxray-always-emit-customevents s
+-fxray-always-emit-typedevents s
+-fxray-always-instrument n
+-fxray-attr-list n
+-fxray-instruction-threshold n
+-fxray-instrumentation-bundle n
+-fxray-instrument n
+-fxray-link-deps s
+-fxray-modes n
+-fxray-never-instrument n
+-fzvector s
+-F n
+--gcc-toolchain n
+-gcodeview-ghash s
+-gcodeview s
+-gdwarf-2 s
+-gdwarf-3 s
+-gdwarf-4 s
+-gdwarf-5 s
+-gembed-source n
+-gline-directives-only s
+-gline-tables-only s
+-gmodules s
+-gno-embed-source s
+-gsplit-dwarf s
+-gz s
+-gz s
+-G n
+-g s
+--help-hidden n
+-help n
+--hip-device-lib-path n
+--hip-device-lib n
+--hip-link s
+-H s
+-I- n
+-idirafter n
+-iframeworkwithsysroot n
+-iframework n
+-imacros n
+-include-pch n
+-include n
+-index-header-map s
+-iprefix n
+-iquote n
+-isysroot n
+-isystem-after n
+-isystem n
+-ivfsoverlay n
+-iwithprefixbefore n
+-iwithprefix n
+-iwithsysroot n
+-I n
+--libomptarget-nvptx-path n
+-L n
+-mabicalls s
+-malign-double s
+-mbackchain s
+-mbranch-protection n
+-mcode-object-v3 s
+-mcrc s
+-MD s
+-meabi n
+-membedded-data s
+-mexecute-only s
+-mextern-sdata s
+-mfentry s
+-mfix-cortex-a53-835769 s
+-mfp32 s
+-mfp64 s
+-MF n
+-mgeneral-regs-only s
+-mglobal-merge s
+-mgpopt s
+-MG n
+-mhvx-length n
+-mhvx s
+-mhvx s
+-miamcu n
+--migrate n
+-mincremental-linker-compatible s
+-mindirect-jump n
+-mios-version-min n
+-MJ n
+-mllvm n
+-mlocal-sdata s
+-mlong-calls s
+-mmacosx-version-min n
+-mmadd4 s
+-MMD s
+-mmemops s
+-mms-bitfields n
+-mmsa s
+-mmt s
+-MM n
+-mno-abicalls s
+-mno-code-object-v3 s
+-mno-crc s
+-mno-embedded-data s
+-mno-execute-only s
+-mno-extern-sdata s
+-mno-fix-cortex-a53-835769 s
+-mno-global-merge s
+-mno-gpopt s
+-mno-hvx s
+-mno-implicit-float s
+-mno-incremental-linker-compatible s
+-mno-local-sdata s
+-mno-long-calls s
+-mno-madd4 s
+-mno-memops s
+-mno-movt s
+-mno-ms-bitfields s
+-mno-msa s
+-mno-mt s
+-mno-neg-immediates s
+-mno-nvj s
+-mno-nvs s
+-mno-outline s
+-mno-packets s
+-mno-relax s
+-mno-restrict-it n
+-mno-sram-ecc s
+-mno-stack-arg-probe s
+-mno-tls-direct-seg-refs s
+-mno-unaligned-access s
+-mno-xnack s
+-mnocrc s
+-mnvj s
+-mnvs s
+-module-dependency-dir n
+-module-file-info n
+-momit-leaf-frame-pointer s
+-moutline s
+-mpackets s
+-mpie-copy-relocations s
+-mprefer-vector-width n
+-MP s
+-mqdsp6-compat s
+-MQ n
+-mrelax-all s
+-mrelax s
+-mrestrict-it n
+-mrtd n
+-msign-return-address n
+-msoft-float s
+-msram-ecc n
+-mstack-alignment n
+-mstack-arg-probe s
+-mstack-probe-size n
+-mstackrealign n
+-mthread-model n
+-mtls-direct-seg-refs s
+-mtp n
+-MT n
+-munaligned-access s
+-MV s
+-mxnack n
+-M n
+--no-cuda-gpu-arch n
+--no-cuda-include-ptx n
+--no-cuda-version-check s
+--no-system-header-prefix n
+-nobuiltininc s
+-nostdinc++ n
+-ObjC++ s
+-objcmt-atomic-property s
+-objcmt-migrate-all s
+-objcmt-migrate-annotation s
+-objcmt-migrate-designated-init s
+-objcmt-migrate-instancetype s
+-objcmt-migrate-literals s
+-objcmt-migrate-ns-macros s
+-objcmt-migrate-property-dot-syntax s
+-objcmt-migrate-property s
+-objcmt-migrate-protocol-conformance s
+-objcmt-migrate-readonly-property s
+-objcmt-migrate-readwrite-property s
+-objcmt-migrate-subscripting s
+-objcmt-ns-nonatomic-iosonly s
+-objcmt-returns-innerpointer-property s
+-objcmt-whitelist-dir-path s
+-ObjC s
+-o n
+-pg s
+-pipe s
+--precompile n
+-print-effective-triple n
+-print-file-name n
+-print-ivar-layout s
+-print-libgcc-file-name n
+-print-prog-name n
+-print-resource-dir n
+-print-search-dirs n
+-print-target-triple n
+-pthread s
+--ptxas-path n
+-P s
+-Qn s
+-Qunused-arguments s
+-Qy s
+-relocatable-pch s
+-rewrite-legacy-objc n
+-rewrite-objc n
+-Rpass-analysis s
+-Rpass-missed s
+-Rpass s
+-rtlib n
+-R s
+-save-stats s
+-save-stats s
+-save-temps s
+-save-temps s
+-serialize-diagnostics n
+-shared-libsan s
+-static-libsan s
+-std n
+-stdlib n
+--system-header-prefix n
+-S n
+--target n
+-Tbss n
+-Tdata n
+-time s
+-traditional-cpp n
+-trigraphs s
+-Ttext n
+-T n
+-undef n
+-unwindlib s
+-U n
+--verify-debug-info s
+-verify-pch n
+--version n
+-v s
+-Wa, s
+-Wdeprecated s
+-Wl, s
+-working-directory n
+-Wp, n
+-W s
+-w s
+-Xanalyzer n
+-Xassembler n
+-Xclang n
+-Xcuda-fatbinary n
+-Xcuda-ptxas n
+-Xlinker n
+-Xopenmp-target n
+-Xopenmp-target n
+-Xpreprocessor n
+-x n
+-z n
