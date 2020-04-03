@@ -218,3 +218,4 @@ hiprtcGetCode
 hiprtcGetCodeSize
 hiprtcGetErrorString
 hipMallocHost
+hipFreeHost
