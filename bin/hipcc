@@ -640,19 +640,23 @@ foreach $arg (@ARGV)
             $toolArgs .= " -x c"
         }
         elsif (($arg =~ /\.cpp$/) or ($arg =~ /\.cxx$/) or ($arg =~ /\.cc$/) ) {
-            if ($HIP_COMPILE_CXX_AS_HIP eq '0') {
+            $needCXXFLAGS = 1;
+            if ($HIP_COMPILE_CXX_AS_HIP eq '0' or $HIP_COMPILER ne "clang") {
                 $hasCXX = 1;
             } else {
                 $hasHIP = 1;
-                $toolArgs .= " -x hip"
+                $toolArgs .= " -x hip";
             }
-            $needCXXFLAGS = 1;
-       }
-        elsif ($arg =~ /\.hip$/) {
-            $hasHIP = 1;
-            $needCXXFLAGS = 1;
         }
-
+        elsif ((($arg =~ /\.cu$/ or $arg =~ /\.cuh$/) and $HIP_COMPILE_CXX_AS_HIP ne '0') or ($arg =~ /\.hip$/)) {
+            $needCXXFLAGS = 1;
+            if ($HIP_COMPILER eq "clang") {
+                $hasHIP = 1;
+                $toolArgs .= " -x hip";
+            } else {
+                $hasCU = 1;
+            }
+        }
         push (@inputs, $arg);
         #print "I: <$arg>\n";
     }
